@@ -45,6 +45,7 @@ namespace PJWFront
 				cl_int ciErrNum;
 				*clSelectedPlatformID = NULL;
 				cl_uint i = 0;
+cout << "Getting ocl platforms" << endl;
 
 				// Get OpenCL platform count
 				ciErrNum = clGetPlatformIDs (0, NULL, &num_platforms);
@@ -56,6 +57,7 @@ namespace PJWFront
 				}
 				else
 				{
+					cout << "No err" << endl;
 					if(num_platforms == 0)
 					{
 						//shrLog("No OpenCL platform found!\n\n");
@@ -64,6 +66,7 @@ namespace PJWFront
 					}
 					else
 					{
+						cout << "More than one platform" << endl;
 						// if there's a platform or more, make space for ID's
 						if ((clPlatformIDs = (cl_platform_id*)malloc(num_platforms * sizeof(cl_platform_id))) == NULL)
 						{
@@ -74,16 +77,16 @@ namespace PJWFront
 
 						// get platform info for each platform and trap the NVIDIA platform if found
 						ciErrNum = clGetPlatformIDs (num_platforms, clPlatformIDs, NULL);
-//						printf("Available platforms:\n");
+						printf("Available platforms:\n");
 						for(i = 0; i < num_platforms; ++i)
 						{
 							ciErrNum = clGetPlatformInfo (clPlatformIDs[i], CL_PLATFORM_NAME, 1024, &chBuffer, NULL);
 							if(ciErrNum == CL_SUCCESS)
 							{
-//								printf("platform %d: %s\n", i, chBuffer);
+								printf("platform %d: %s\n", i, chBuffer);
 								if(strstr(chBuffer, "NVIDIA") != NULL)
 								{
-//									printf("selected platform %d\n", i);
+									printf("selected platform %d\n", i);
 									*clSelectedPlatformID = clPlatformIDs[i];
 									break;
 								}
@@ -95,7 +98,7 @@ namespace PJWFront
 						{
 							//shrLog("WARNING: NVIDIA OpenCL platform not found - defaulting to first platform!\n\n");
 							//printf("WARNING: NVIDIA OpenCL platform not found - defaulting to first platform!\n\n");
-//							printf("selected platform: %d\n", 0);
+							printf("selected platform: %d\n", 0);
 							*clSelectedPlatformID = clPlatformIDs[0];
 						}
 
@@ -192,6 +195,7 @@ namespace PJWFront
 			/// A platform and device will be selected, a context and command queue will be created
 			OCLBackend()
 			{
+				cout << "Enter ctor" << endl;
 				cl_int error;
 
 				// Platform setup

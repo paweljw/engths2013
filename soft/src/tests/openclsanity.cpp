@@ -10,7 +10,7 @@ int main()
 							"const int idx = get_global_id(0);"
 							"if (idx < num)"
 							"res[idx] = src_a[idx] + src_b[idx]; } ";
-
+/*
 	backend.createProgram(kernels);
 	
 	float *cpu_a, *cpu_b, *cpu_res;
@@ -54,6 +54,6 @@ int main()
 		cout << ret[i] << " ";
 	}
 	cout << endl;
-	
+*/	
 	return 0;
 }
