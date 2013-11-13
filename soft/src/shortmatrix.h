@@ -237,8 +237,11 @@ namespace PJWFront
 			/// Prints the formatted matrix as it currently is stored in the CPU memory.
 			void printMatrix()
 			{
+				cout << "----------------------------------" << endl;
+				cout << "Printing an " << size << "x" << size << " matrix" << endl;
 				for(int i=0; i<size; i++)
 				{
+					cout << "Row " << i << ": \t";
 					for(int j=0; j<size; j++)
 						std::cout << classic_matrix[i][j] << " ";
 					std::cout << std::endl;

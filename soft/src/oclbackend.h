@@ -45,7 +45,6 @@ namespace PJWFront
 				cl_int ciErrNum;
 				*clSelectedPlatformID = NULL;
 				cl_uint i = 0;
-cout << "Getting ocl platforms" << endl;
 
 				// Get OpenCL platform count
 				ciErrNum = clGetPlatformIDs (0, NULL, &num_platforms);
@@ -57,7 +56,6 @@ cout << "Getting ocl platforms" << endl;
 				}
 				else
 				{
-					cout << "No err" << endl;
 					if(num_platforms == 0)
 					{
 						//shrLog("No OpenCL platform found!\n\n");
@@ -66,7 +64,6 @@ cout << "Getting ocl platforms" << endl;
 					}
 					else
 					{
-						cout << "More than one platform" << endl;
 						// if there's a platform or more, make space for ID's
 						if ((clPlatformIDs = (cl_platform_id*)malloc(num_platforms * sizeof(cl_platform_id))) == NULL)
 						{
@@ -88,7 +85,7 @@ cout << "Getting ocl platforms" << endl;
 								{
 									printf("selected platform %d\n", i);
 									*clSelectedPlatformID = clPlatformIDs[i];
-									break;
+									//break;
 								}
 							}
 						}
@@ -195,7 +192,6 @@ cout << "Getting ocl platforms" << endl;
 			/// A platform and device will be selected, a context and command queue will be created
 			OCLBackend()
 			{
-				cout << "Enter ctor" << endl;
 				cl_int error;
 
 				// Platform setup
@@ -269,7 +265,7 @@ cout << "Getting ocl platforms" << endl;
 				cl_int error = clEnqueueReadBuffer(queue, data, CL_TRUE, 0, datasize, dataptr, 0, NULL, NULL); 
 				if(error != CL_SUCCESS)
 				{
-					cout << "Error reading data: " << oclErrorString(error) << endl;
+					cout << "Error reading data [" << datasize << " bits]: " << oclErrorString(error) << endl;
 					exit(error);
 				}
 			}
@@ -330,8 +326,6 @@ cout << "Getting ocl platforms" << endl;
 
 				size_t kernel_work_group_size;
 				clGetKernelWorkGroupInfo(ret, device, CL_KERNEL_WORK_GROUP_SIZE, sizeof(size_t), &kernel_work_group_size, NULL);
-
-				cout << "Kernel WG size: " << kernel_work_group_size << endl;
 				
 				return ret;
 			}
@@ -417,7 +411,24 @@ cout << "Getting ocl platforms" << endl;
 			/// Blocks until the commands in the queue have been completed, successfully or otherwise.
 			void finish()
 			{
-				clFinish(queue);
+				cl_int error = clFinish(queue);
+				if(error != CL_SUCCESS)
+				{
+					cout << "Error finishing queue: " << oclErrorString(error) << endl;
+					exit(error);
+				}
+				
+			}
+			
+			void finish(std::string what)
+			{
+				cl_int error = clFinish(queue);
+				if(error != CL_SUCCESS)
+				{
+					cout << "Error finishing queue [" << what << "]: " << oclErrorString(error) << endl;
+					exit(error);
+				}
+				
 			}
 			
 			/// Blocks until the command attached to the event has finished, then returns its elapsed time.
@@ -435,14 +446,14 @@ cout << "Getting ocl platforms" << endl;
 				err = clGetEventProfilingInfo(event, CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
 				if(err != CL_SUCCESS)
 				{
-					cout << "Error timing kernel: " << oclErrorString(err) << endl;
+					cout << "Error timing kernel [start]: " << oclErrorString(err) << "[" << err << "]" << endl;
 					exit(err);
 				}
 
 				err = clGetEventProfilingInfo(event, CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
 				if(err != CL_SUCCESS)
 				{
-					cout << "Error timing kernel: " << oclErrorString(err) << endl;
+					cout << "Error timing kernel [stop]: " << oclErrorString(err) << "[" << err << "]" << endl;
 					exit(err);
 				}
 

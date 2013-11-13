@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 
-//#define __SOLVERDEBUG
+#define __SOLVERDEBUG
 #define __SOLVERTIMING
 
 #include "gpusolver.h"
@@ -37,6 +37,8 @@ int main(int argc, char* argv[])
 	bool checked_size = false;
 	int N, M, DP;
 
+	cout << "MTX: Loading matrix size" << endl;
+
 	while(getline(main, line))
 	{
 		if(line[0] != '%')
@@ -54,6 +56,8 @@ int main(int argc, char* argv[])
 
 	PJWFront::GPUFrontal<float> gpuf(N);
 
+	cout << "MTX: Loading matrix data" << endl;
+
 	while(getline(main, line))
 	{
 		if(line[0] != '%')
@@ -69,6 +73,8 @@ int main(int argc, char* argv[])
 	}
 
 	checked_size = false;
+
+	cout << "MTX: Loading RHS data" << endl;
 
 	int counter = 0;
 	while(getline(rhs, line))
@@ -87,8 +93,11 @@ int main(int argc, char* argv[])
 		}
 	}
 
+	cout << "Passing control to solver" << endl;
+
 	gpuf.solve();
 
+	cout << "Solver returned control" << endl;
 
-
+	return 0;
 }
