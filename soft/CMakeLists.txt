@@ -85,5 +85,5 @@ add_executable(mtx_loader src/tests/mtx_loader.cpp)
 
 target_link_libraries(mtx_loader ${OPENCL_LIBRARIES})
 
-add_test(MTX_LDR ${CMAKE_CURRENT_BINARY_DIR}/mtx_loader C:/Users/PJW/Documents/gpufs/build/Debug/sherman1.mtx C:/Users/PJW/Documents/gpufs/build/Debug/sherman1_rhs1.mtx)
+add_test(MTX_LDR ${CMAKE_CURRENT_BINARY_DIR}/mtx_loader build/mtx/sherman1.mtx build/mtx/sherman1_rhs1.mtx)
 

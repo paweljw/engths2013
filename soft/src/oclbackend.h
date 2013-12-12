@@ -74,18 +74,18 @@ namespace PJWFront
 
 						// get platform info for each platform and trap the NVIDIA platform if found
 						ciErrNum = clGetPlatformIDs (num_platforms, clPlatformIDs, NULL);
-//						printf("Available platforms:\n");
+						printf("Available platforms:\n");
 						for(i = 0; i < num_platforms; ++i)
 						{
 							ciErrNum = clGetPlatformInfo (clPlatformIDs[i], CL_PLATFORM_NAME, 1024, &chBuffer, NULL);
 							if(ciErrNum == CL_SUCCESS)
 							{
-//								printf("platform %d: %s\n", i, chBuffer);
+								printf("platform %d: %s\n", i, chBuffer);
 								if(strstr(chBuffer, "NVIDIA") != NULL)
 								{
-//									printf("selected platform %d\n", i);
+									printf("selected platform %d\n", i);
 									*clSelectedPlatformID = clPlatformIDs[i];
-									break;
+									//break;
 								}
 							}
 						}
@@ -95,7 +95,7 @@ namespace PJWFront
 						{
 							//shrLog("WARNING: NVIDIA OpenCL platform not found - defaulting to first platform!\n\n");
 							//printf("WARNING: NVIDIA OpenCL platform not found - defaulting to first platform!\n\n");
-//							printf("selected platform: %d\n", 0);
+							printf("selected platform: %d\n", 0);
 							*clSelectedPlatformID = clPlatformIDs[0];
 						}
 
@@ -265,7 +265,7 @@ namespace PJWFront
 				cl_int error = clEnqueueReadBuffer(queue, data, CL_TRUE, 0, datasize, dataptr, 0, NULL, NULL); 
 				if(error != CL_SUCCESS)
 				{
-					cout << "Error reading data: " << oclErrorString(error) << endl;
+					cout << "Error reading data [" << datasize << " bits]: " << oclErrorString(error) << endl;
 					exit(error);
 				}
 			}
@@ -326,8 +326,6 @@ namespace PJWFront
 
 				size_t kernel_work_group_size;
 				clGetKernelWorkGroupInfo(ret, device, CL_KERNEL_WORK_GROUP_SIZE, sizeof(size_t), &kernel_work_group_size, NULL);
-
-				cout << "Kernel WG size: " << kernel_work_group_size << endl;
 				
 				return ret;
 			}
@@ -413,7 +411,24 @@ namespace PJWFront
 			/// Blocks until the commands in the queue have been completed, successfully or otherwise.
 			void finish()
 			{
-				clFinish(queue);
+				cl_int error = clFinish(queue);
+				if(error != CL_SUCCESS)
+				{
+					cout << "Error finishing queue: " << oclErrorString(error) << endl;
+					exit(error);
+				}
+				
+			}
+			
+			void finish(std::string what)
+			{
+				cl_int error = clFinish(queue);
+				if(error != CL_SUCCESS)
+				{
+					cout << "Error finishing queue [" << what << "]: " << oclErrorString(error) << endl;
+					exit(error);
+				}
+				
 			}
 			
 			/// Blocks until the command attached to the event has finished, then returns its elapsed time.
@@ -431,14 +446,14 @@ namespace PJWFront
 				err = clGetEventProfilingInfo(event, CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
 				if(err != CL_SUCCESS)
 				{
-					cout << "Error timing kernel: " << oclErrorString(err) << endl;
+					cout << "Error timing kernel [start]: " << oclErrorString(err) << "[" << err << "]" << endl;
 					exit(err);
 				}
 
 				err = clGetEventProfilingInfo(event, CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
 				if(err != CL_SUCCESS)
 				{
-					cout << "Error timing kernel: " << oclErrorString(err) << endl;
+					cout << "Error timing kernel [stop]: " << oclErrorString(err) << "[" << err << "]" << endl;
 					exit(err);
 				}
 

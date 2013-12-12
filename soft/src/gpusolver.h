@@ -4,11 +4,17 @@
 #include "oclbackend.h"
 #include "shortmatrix.h"
 #include "oclvector.h"
+#include <cfloat>
 
 namespace PJWFront
 {
 
-	static const char * __pjws__kernels = "#pragma OPENCL EXTENSION cl_khr_int64_base_atomics: enable\n"
+	static const char * __pjws__kernels = "#pragma OPENCL EXTENSION cl_khr_global_int32_base_atomics : enable"
+	"#pragma OPENCL EXTENSION cl_khr_local_int32_base_atomics : enable"
+	"#pragma OPENCL EXTENSION cl_khr_global_int32_extended_atomics : enable"
+	"#pragma OPENCL EXTENSION cl_khr_local_int32_extended_atomics : enable"
+	"#pragma OPENCL EXTENSION cl_khr_int64_base_atomics: enable\n"
+	"#pragma OPENCL EXTENSION cl_khr_int64_extended_atomics: enable\n"
 	"inline int CmGet(const unsigned int i,const unsigned int j,__global unsigned int* rowsPtr,__global unsigned int* fnIds,__global unsigned int *N){\n"
 	"	if(i >= *N || j >= *N) return -1;"
 	"	unsigned int offset = rowsPtr[i];\n"
@@ -23,6 +29,12 @@ namespace PJWFront
 	"	unsigned int flop = 2;\n"	
 	"	for(int i=begin; i<(*N);i++)\n"
 	"	{\n"
+	"		if(i==begin)\n"
+	"		{ \n"
+	"			int origpos = CmGet(original, i, rowsPtr, fnIds, N); \n"
+	"			dataMatrix[origpos] = 0; \n"
+	"			continue; \n"
+	"		}\n"
 	"		int origpos = CmGet(original, i, rowsPtr, fnIds, N);\n"
 	"		int ofpos = CmGet(offender, i, rowsPtr, fnIds, N);\n"
 	"		flop += 1;"
@@ -34,17 +46,17 @@ namespace PJWFront
 	"	flop += 1;\n"
 	"   return flop;\n"
 	"}\n"
-	"inline float _abs(float val) { if(val < 0) return val*-1.0f; return val; }"
-	"inline int RowFunction(unsigned int row,__global float* dataMatrix,__global unsigned int* rowsPtr,__global unsigned int* fnIds,__global unsigned int *N){\n"
+	"inline float ___abs(float val) { if(val < 0) return val*-1.0f; return val; }"
+	"inline unsigned int RowFunction(unsigned int row,__global float* dataMatrix,__global unsigned int* rowsPtr,__global unsigned int* fnIds,__global unsigned int *N){\n"
 	"	if(row >= *N) return -1;"
 	"	unsigned int beginAt = rowsPtr[row];\n"
 	"	unsigned int searchUntil = (*N) - fnIds[row];\n"
 	"	for(unsigned int ix = 0; ix < searchUntil; ix++){\n"
-	"		if(_abs(dataMatrix[beginAt+ix]) <= --TAG_NUMERICAL_ERROR--) dataMatrix[beginAt+ix] = 0;"
+	"		if(___abs(dataMatrix[beginAt+ix]) <= --TAG_NUMERICAL_ERROR--) dataMatrix[beginAt+ix] = 0;"
 	"		if(dataMatrix[beginAt+ix] != 0) return fnIds[row]+ix;}\n"
-	"	return (*N)-1;"
+	"	return (*N);"
 	"};\n"
-	"__kernel void Mangler(__global float* dataMatrix, __global unsigned int* rowsPtr, __global unsigned int* fnIds, __global float* dataRhs, __global int* map, __global unsigned int* N, __global const unsigned int *param_block_size, __global unsigned long *flop) \n"
+	"__kernel void Mangler(__global float* dataMatrix, __global unsigned int* rowsPtr, __global unsigned int* fnIds, __global float* dataRhs, __global int* map, __global unsigned int* N, __global const unsigned int *param_block_size, __global unsigned int *flop) \n"
 	"{\n"
 	"	__local int localMap[--TAG_LOCAL_MAP_SIZE--];\n"
 	"	atomic_add(flop, 1);\n"
@@ -61,8 +73,8 @@ namespace PJWFront
 	"		while(true){"
 	"			int function = 0;\n"
 	"			function = RowFunction(rnumber, dataMatrix, rowsPtr, fnIds, N);\n"
-	"			if(function == -1) break;\n"
-	"			int offender = atomic_cmpxchg(&localMap[function], -1, rnumber);\n"
+	"			if(function < 0 || function >= (*N)) break;\n"
+	"			int offender = atomic_cmpxchg(&(localMap[function]), -1, rnumber);\n"
 	"			if(offender != -1)\n"
 	"				atomic_add(flop, ReduceRows(rnumber, offender, function, rowsPtr, fnIds, dataMatrix, dataRhs, N));\n"
 	"			else break;\n"
@@ -76,7 +88,7 @@ namespace PJWFront
 	"		}\n"
 	"	}\n"
 	"}\n"
-	"__kernel void Resolver(__global float* dataMatrix,__global unsigned int* rowsPtr,__global unsigned int* fnIds,__global float* dataRhs,__global unsigned int* map,__global unsigned int *N,__global unsigned int *BLOX,__global unsigned int *ops, __global unsigned long *flop){\n"
+	"__kernel void Resolver(__global float* dataMatrix,__global unsigned int* rowsPtr,__global unsigned int* fnIds,__global float* dataRhs,__global unsigned int* map,__global unsigned int *N,__global unsigned int *BLOX,__global unsigned int *ops, __global unsigned int *flop){\n"
 	"	int row = get_local_id(0);\n"
 	"	if(row < (*N)){"
 	"	int first = -1;\n"
@@ -157,7 +169,7 @@ namespace PJWFront
 		/// @param _GWS Global work size, autocalculates unless nonzero provided
 		/// @param _NE Allowable numerical error (basically tells GPU abs(number) < numerical_error -> number = 0), set to a safe value unless provided by hand
 		/// @remark If an unreasonable value is provided for _LWS parameter, the constructor will override user's decision and try to salvage the situation.
-		GPUFrontal(int size, uint _LWS = 0, uint _GWS = 0, ScalarType _NE = 0.00001f)
+		GPUFrontal(int size, uint _LWS = 0, uint _GWS = 0, ScalarType _NE = FLT_MIN)
 		{
 			// Initialize OpenCL backend
 			backend = new ocl::OCLBackend();
@@ -254,6 +266,7 @@ namespace PJWFront
 
 			cl_mem gpu_N_handle = backend->sendData(&N, sizeof(uint));
 			
+			// TAG: B#1
 			uint localN = N/BLOCK_NUM;
 			cl_mem gpu_blocksize_handle = backend->sendData(&localN, sizeof(uint));
 			
@@ -264,10 +277,10 @@ namespace PJWFront
 			cl_mem gpu_mx_h2 = gpu_matrix.ocl_offsets_handle();
 			cl_mem gpu_mx_h3 = gpu_matrix.ocl_rowfns_handle();
 
-			unsigned long *cpu_flops = new unsigned long;
+			unsigned int *cpu_flops = new unsigned int;
 			*cpu_flops = 0;
 
-			cl_mem gpu_flops = backend->sendData((void*)cpu_flops, sizeof(unsigned long));
+			cl_mem gpu_flops = backend->sendData((void*)cpu_flops, sizeof(unsigned int));
 
 			// Note: PCI-e data transfer happening above
 			
@@ -332,7 +345,7 @@ namespace PJWFront
 
 				// Send up zeroed out ops number
 				cl_mem gpu_ops = backend->sendData(cpu_ops, sizeof(unsigned int));
-
+#ifdef __SOLVERTIMING
 				// Enqueue first kernel and let it finish
 				// Time first kernel
 				cl_event mangler_event = backend->enqueueEventKernel(Mangler, LWS, GWS);
@@ -344,15 +357,15 @@ namespace PJWFront
 				// Time second kernel
 				cl_event resolver_event = backend->enqueueEventKernel(Resolver, N, N);
 				allTimings += backend->timedFinish(resolver_event);				
-				/*
+#else
 				backend->enqueueKernel(Mangler, LWS, GWS);
-				backend->finish();
+				backend->finish("mangler");
 
 				// Set last parameter to current handle for second kernel, enqueue and let it finish
 				backend->arg(Resolver, 7, gpu_ops);
 				backend->enqueueKernel(Resolver, N, N);
-				backend->finish();
-				*/
+				backend->finish("resolver");
+#endif
 
 
 #ifdef __SOLVERDEBUG
@@ -377,22 +390,22 @@ namespace PJWFront
 					cout << gpu_rhs.v.at(i) << " ";
 				}
 				cout << endl;
-		
+#endif					
 				cout << "[b] Cpu ops is " << *cpu_ops << endl;
-#endif			
+
 	
 				// Download operations data
 				backend->receiveData(gpu_ops, cpu_ops, sizeof(unsigned int));
 				
-#ifdef __SOLVERDEBUG								
+//#ifdef __SOLVERDEBUG								
 				cout << "[a] Cpu ops is " << *cpu_ops << endl;
-#endif
+//#endif
 			// Loop ends if no operations were needed
 			} while(*cpu_ops > 0);
 			
 			#pragma endregion
 
-			backend->receiveData(gpu_flops, cpu_flops, sizeof(unsigned long));
+			backend->receiveData(gpu_flops, cpu_flops, sizeof(unsigned int));
 
 #ifdef __SOLVERTIMING
 			printf("Time in kernels: %0.9f s\n", allTimings);
