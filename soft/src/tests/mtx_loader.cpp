@@ -2,8 +2,9 @@
 #include <string>
 #include <fstream>
 
-#define __SOLVERDEBUG
-#define __SOLVERTIMING
+//#define __SOLVERDEBUG
+//#define __SOLVERTIMING
+//#define __SOLVERTIMING_SILENT
 
 #include "gpusolver.h"
 
@@ -52,8 +53,6 @@ int main(int argc, char* argv[])
 	bool checked_size = false;
 	int N, M, DP;
 
-	cout << "MTX: Loading matrix size" << endl;
-
 	while(getline(main, line))
 	{
 		if(line[0] != '%')
@@ -63,7 +62,6 @@ int main(int argc, char* argv[])
 			if(!checked_size)
 			{
 				iss >> N >> M >> DP;
-				cout << "N: " << N << ", M: " << M << ", DP: " << DP << endl;
 				break;
 			}
 		}
@@ -71,7 +69,11 @@ int main(int argc, char* argv[])
 
 	PJWFront::GPUFrontal<float> gpuf(N, _LWS, _GWS);
 
-	cout << "MTX: Loading matrix data" << endl;
+	cout << "MTX: " << mtx_main << endl;
+	cout << "RHS: " << mtx_rhs << endl;
+	cout << "GWS: " << gpuf.GWS << endl;
+	cout << "LWS: " << gpuf.LWS << endl;
+	cout << "N:   " << N << endl << "M:   " << M << endl << "DP:   " << DP << endl;
 
 	while(getline(main, line))
 	{
@@ -89,8 +91,6 @@ int main(int argc, char* argv[])
 
 	checked_size = false;
 
-	cout << "MTX: Loading RHS data" << endl;
-
 	int counter = 0;
 	while(getline(rhs, line))
 	{
@@ -103,17 +103,29 @@ int main(int argc, char* argv[])
 			iss >> val;
 
 			gpuf.setRHS(counter, val);
-			cout << counter << endl;
+			// cout << counter << endl;
 			counter++;
 			}
 		}
 	}
 
-	cout << "Passing control to solver" << endl;
+	try
+	{
+		gpuf.solve();
+	} catch(PJWFront::BadException) {
+		cout << "General bad exception happened" << endl;
+		return 0;
+	} catch(PJWFront::UnsolvableException) {
+		cout << "System appears to be unsolvable" << endl;
+		return 0;
+	} catch(PJWFront::NanException) {
+		cout << "The NaN error appeared" << endl;
+		return 0;
+	}
 
-	gpuf.solve();
+	//cout << "Time:  " << gpuf.ocltime << "s" << endl;
+	//cout << "FMADs: " << gpuf.fmads << endl;
 
-	cout << "Solver returned control" << endl;
 
 	return 0;
 }

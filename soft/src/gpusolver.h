@@ -10,6 +10,104 @@ namespace PJWFront
 {
 	// TODO: Are all these pragmas seriously necessary?!
 
+	static const char * __unfmad__pjws__kernels = "#pragma OPENCL EXTENSION cl_khr_global_int32_base_atomics : enable"
+	"#pragma OPENCL EXTENSION cl_khr_local_int32_base_atomics : enable"
+	"#pragma OPENCL EXTENSION cl_khr_global_int32_extended_atomics : enable"
+	"#pragma OPENCL EXTENSION cl_khr_local_int32_extended_atomics : enable"
+	"#pragma OPENCL EXTENSION cl_khr_int64_base_atomics: enable\n"
+	"#pragma OPENCL EXTENSION cl_khr_int64_extended_atomics: enable\n"
+	"inline int CmGet(const unsigned int i,const unsigned int j,__global unsigned int* rowsPtr,__global unsigned int* fnIds,__global unsigned int *N){\n"
+	"	if(i >= *N || j >= *N) return -1;"
+	"	unsigned int offset = rowsPtr[i];\n"
+	"	int colOffset = j - fnIds[i];\n"
+	"	if(colOffset < 0)\n"
+	"		return -1;\n"
+	"	return offset+colOffset;\n"
+	"}\n"
+	"ReduceRows(const unsigned int original,const unsigned int offender,const unsigned int begin,__global unsigned int* rowsPtr,__global unsigned int* fnIds,__global float* dataMatrix,__global float* dataRhs,__global unsigned int *N){\n"
+	"	float multiplier = dataMatrix[CmGet(original, begin, rowsPtr, fnIds, N)] / dataMatrix[CmGet(offender, begin, rowsPtr, fnIds, N)];\n"
+	"	multiplier *= -1;\n"
+	"	for(int i=begin; i<(*N);i++)\n"
+	"	{\n"
+	"		if(i==begin)\n"
+	"		{ \n"
+	"			int origpos = CmGet(original, i, rowsPtr, fnIds, N); \n"
+	"			dataMatrix[origpos] = 0; \n"
+	"			continue; \n"
+	"		}\n"
+	"		int origpos = CmGet(original, i, rowsPtr, fnIds, N);\n"
+	"		int ofpos = CmGet(offender, i, rowsPtr, fnIds, N);\n"
+	"		if(ofpos == -1 || origpos == -1)\n"
+	"			continue;\n"
+	"		dataMatrix[origpos] += dataMatrix[ofpos] * multiplier;\n"
+	"	}\n"
+	"	dataRhs[original] += dataRhs[offender] * multiplier;\n"
+	"}\n"
+	"inline float ___abs(float val) { if(val < 0) return val*-1.0f; return val; }"
+	"inline unsigned int RowFunction(unsigned int row,__global float* dataMatrix,__global unsigned int* rowsPtr,__global unsigned int* fnIds,__global unsigned int *N){\n"
+	"	if(row >= *N) return -1;"
+	"	unsigned int beginAt = rowsPtr[row];\n"
+	"	unsigned int searchUntil = (*N) - fnIds[row];\n"
+	"	for(unsigned int ix = 0; ix < searchUntil; ix++){\n"
+	"		if(___abs(dataMatrix[beginAt+ix]) <= --TAG_NUMERICAL_ERROR--) dataMatrix[beginAt+ix] = 0;"
+	"		if(dataMatrix[beginAt+ix] != 0) return fnIds[row]+ix;}\n"
+	"	return (*N);"
+	"};\n"
+	"__kernel void Mangler(__global float* dataMatrix, __global unsigned int* rowsPtr, __global unsigned int* fnIds, __global float* dataRhs, __global int* map, __global unsigned int* N, __global const unsigned int *param_block_size) \n"
+	"{\n"
+	"	__local int localMap[--TAG_LOCAL_MAP_SIZE--];\n"
+	"	int threadID = get_local_id(0);\n"
+	"	int blockID = get_group_id(0);\n"
+	"	if(0 == threadID) \n"
+	"	{\n"
+	"		for(int i=0; i<(*N); i++) \n"
+	"				localMap[i] = -1;\n"
+	"	}\n"
+	"	barrier(CLK_LOCAL_MEM_FENCE);\n"
+	"	int rnumber = blockID * (*param_block_size) + threadID;\n"
+	"	if(rnumber < (*N))"
+	"		while(true){"
+	"			int function = 0;\n"
+	"			function = RowFunction(rnumber, dataMatrix, rowsPtr, fnIds, N);\n"
+	"			if(function < 0 || function >= (*N)) break;\n"
+	"			int offender = atomic_cmpxchg(&(localMap[function]), -1, rnumber);\n"
+	"			if(offender != -1)\n"
+	"				ReduceRows(rnumber, offender, function, rowsPtr, fnIds, dataMatrix, dataRhs, N);\n"
+	"			else break;\n"
+	"		}\n"
+	"	barrier(CLK_LOCAL_MEM_FENCE);\n"
+	"	if(threadID == 0)\n"
+	"	{\n"
+	"		for(int i=0; i<(*N); i++)\n"
+	"		{\n"
+	"			map[blockID*(*N)+i] = localMap[i];\n"
+	"		}\n"
+	"	}\n"
+	"}\n"
+	"__kernel void Resolver(__global float* dataMatrix,__global unsigned int* rowsPtr,__global unsigned int* fnIds,__global float* dataRhs,__global unsigned int* map,__global unsigned int *N,__global unsigned int *BLOX,__global unsigned int *ops){\n"
+	"	int row = get_local_id(0);\n"
+	"	if(row < (*N)){"
+	"	int first = -1;\n"
+	"	int function = -1;\n"
+	"	int lops = 0;\n"
+	"	for(int i=0; i<(*BLOX); i++)\n"
+	"	{\n"
+	"		if(map[i*(*N)+row] != -1)\n"
+	"		{\n"
+	"			if(first == -1){\n"
+	"				first = map[i*(*N)+row];\n"
+	"				function = RowFunction(row, dataMatrix, rowsPtr, fnIds, N);\n"
+	"				continue;\n"
+	"			} else {\n"
+	"				int thisRow = map[i*(*N)+row];\n"
+	"				ReduceRows(thisRow, first, function, rowsPtr, fnIds, dataMatrix, dataRhs, N);\n"
+	"				lops++;\n"
+	"			}\n"
+	"		}\n"
+	"	}\n"
+	"	atomic_add(ops, lops);}"
+	"}\n";
+	
 	static const char * __pjws__kernels = "#pragma OPENCL EXTENSION cl_khr_global_int32_base_atomics : enable"
 	"#pragma OPENCL EXTENSION cl_khr_local_int32_base_atomics : enable"
 	"#pragma OPENCL EXTENSION cl_khr_global_int32_extended_atomics : enable"
@@ -123,11 +221,6 @@ namespace PJWFront
 	private:
 		/// Number of processing blocks (CUDA: workgroups, OCL: workitems).
 		uint BLOCK_NUM;
-
-		/// Global Work Size
-		uint GWS;
-		/// Local Work Size (workgroup/workitem size)
-		uint LWS;
 		
 		/// CPU-to-GPU data matrix structure
 		util::short_matrix<ScalarType>	gpu_matrix;
@@ -141,9 +234,6 @@ namespace PJWFront
 
 		/// Size of an NxN matrix
 		uint N;
-		
-		double fmads;
-		double ocltime;
 
 		/// Numerical error storage
 		ScalarType NUM_ERR;
@@ -164,6 +254,16 @@ namespace PJWFront
 		}
 
 	public:
+		/// FMADs number external storage for automated testing
+		double fmads;
+		/// Total time spent in OCL
+		double ocltime;
+
+		/// Global Work Size
+		uint GWS;
+		/// Local Work Size (workgroup/workitem size)
+		uint LWS;
+
 		/// Solution vector storage
 		std::vector<ScalarType> solution;
 		
@@ -312,7 +412,7 @@ namespace PJWFront
 			backend->arg(Mangler, 4,  gpu_map_handle);
 			backend->arg(Mangler, 5,  gpu_N_handle);
 			backend->arg(Mangler, 6,  gpu_blocksize_handle);
-			backend->arg(Mangler, 7, gpu_flops);
+			//backend->arg(Mangler, 7, gpu_flops);
 
 			/*
 			0. __global float* dataMatrix,						// Flat-format data matrix as generated by short_matrix
@@ -335,7 +435,7 @@ namespace PJWFront
 			backend->arg(Resolver, 4, gpu_map_handle);
 			backend->arg(Resolver, 5, gpu_N_handle);
 			backend->arg(Resolver, 6, gpu_blocknum_handle);
-			backend->arg(Resolver, 8, gpu_flops);
+			//backend->arg(Resolver, 8, gpu_flops);
 
 			// This will store 7th parameter CPU-side
 			unsigned int *cpu_ops = new unsigned int;
@@ -358,7 +458,7 @@ namespace PJWFront
 
 				// Send up zeroed out ops number
 				cl_mem gpu_ops = backend->sendData(cpu_ops, sizeof(unsigned int));
-#ifdef __SOLVERTIMING
+#if defined(__SOLVERTIMING) || defined(__SOLVERTIMING_SILENT)
 				// Enqueue first kernel and let it finish
 				// Time first kernel
 				cl_event mangler_event = backend->enqueueEventKernel(Mangler, LWS, GWS);
@@ -403,10 +503,9 @@ namespace PJWFront
 					cout << gpu_rhs.v.at(i) << " ";
 				}
 				cout << endl;
-#endif					
 				cout << "[b] Cpu ops is " << *cpu_ops << endl;
+#endif					
 
-	
 				// Download operations data
 				backend->receiveData(gpu_ops, cpu_ops, sizeof(unsigned int));
 				
@@ -429,12 +528,11 @@ namespace PJWFront
 			
 			#pragma endregion
 
-			backend->receiveData(gpu_flops, cpu_flops, sizeof(unsigned int));
-
 #ifdef __SOLVERTIMING
+			backend->receiveData(gpu_flops, cpu_flops, sizeof(unsigned int));
+			fmads = *cpu_flops / ocltime;
 			printf("Time in kernels: %0.9f s\n", ocltime);
 			printf("Calculated FMAD: %u\n", *cpu_flops);
-			fmads = *cpu_flops / ocltime;
 			printf("FLOPS: %0.3f\n", fmads);
 #endif
 			
@@ -538,7 +636,7 @@ namespace PJWFront
 		{
 			std::string mykernels = "";
 
-			mykernels = util::replaceKernelTag(__pjws__kernels, "--TAG_LOCAL_MAP_SIZE--", N);
+			mykernels = util::replaceKernelTag(__unfmad__pjws__kernels, "--TAG_LOCAL_MAP_SIZE--", N);
 			mykernels = util::replaceKernelTag(mykernels, "--TAG_NUMERICAL_ERROR--", NUM_ERR);
 
 			backend->createProgram(mykernels);
