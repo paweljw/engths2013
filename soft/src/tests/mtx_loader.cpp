@@ -14,6 +14,21 @@ int main(int argc, char* argv[])
 	string mtx_main = argv[1];
 	string mtx_rhs = argv[2];
 
+	unsigned int _LWS = 192;
+	unsigned int _GWS = 0;
+	
+	if(argc > 3)
+	{
+		string sLWS = argv[3];
+		string sGWS = argv[4];
+		
+		istringstream isLWS(sLWS);
+		istringstream isGWS(sGWS);
+		
+		isLWS >> _LWS;
+		isGWS >> _GWS;
+	}
+	
 	fstream main;
 	main.open(mtx_main.c_str(), std::fstream::in);
 
@@ -54,7 +69,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	PJWFront::GPUFrontal<float> gpuf(N);
+	PJWFront::GPUFrontal<float> gpuf(N, _LWS, _GWS);
 
 	cout << "MTX: Loading matrix data" << endl;
 

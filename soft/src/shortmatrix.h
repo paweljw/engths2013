@@ -185,17 +185,17 @@ namespace PJWFront
 			{
 				backend->receiveData(data, flat_matrix, DataPoints * sizeof(ScalarType));
 				
-				for(int i=0; i<size; i++)
-					for(int j=0; j<size; j++)
+				for(uint i=0; i<size; i++)
+					for(uint j=0; j<size; j++)
 						classic_matrix[i][j] = 0;
 				
-				for(int i=0; i<size; i++) // i is a row number now
+				for(uint i=0; i<size; i++) // i is a row number now
 				{
 					uint begin = row_begins[i];
 					uint offset = row_offsets[i];
 					if(begin > size) continue;
 					
-					for(int j=begin; j<size; j++)
+					for(uint j=begin; j<size; j++)
 					{
 						classic_matrix[i][j] = flat_matrix[offset+(j-begin)];
 					}
@@ -239,10 +239,10 @@ namespace PJWFront
 			{
 				cout << "----------------------------------" << endl;
 				cout << "Printing an " << size << "x" << size << " matrix" << endl;
-				for(int i=0; i<size; i++)
+				for(uint i=0; i<size; i++)
 				{
 					cout << "Row " << i << ": \t";
-					for(int j=0; j<size; j++)
+					for(uint j=0; j<size; j++)
 						std::cout << classic_matrix[i][j] << " ";
 					std::cout << std::endl;
 				}

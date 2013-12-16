@@ -142,7 +142,7 @@ namespace PJWFront
 		/// Size of an NxN matrix
 		uint N;
 		
-		uint fmads;
+		double fmads;
 		double ocltime;
 
 		/// Numerical error storage
@@ -166,6 +166,11 @@ namespace PJWFront
 	public:
 		/// Solution vector storage
 		std::vector<ScalarType> solution;
+		
+		/// compat
+		GPUFrontal()
+		{
+		}
 		
 		/// Main constructor
 		/// @param size The size of the matrix
@@ -408,11 +413,11 @@ namespace PJWFront
 #ifdef __SOLVERDEBUG								
 				cout << "[a] Cpu ops is " << *cpu_ops << endl;
 #endif
-				if(cpu_ops == last_cpu_ops)
+				if(*cpu_ops == last_cpu_ops)
 					same_for++;
 				else
 				{
-					last_cpu_ops = cpu_ops;
+					last_cpu_ops = *cpu_ops;
 					same_for = 0;
 				}
 				
@@ -427,10 +432,10 @@ namespace PJWFront
 			backend->receiveData(gpu_flops, cpu_flops, sizeof(unsigned int));
 
 #ifdef __SOLVERTIMING
-			printf("Time in kernels: %0.9f s\n", allTimings);
+			printf("Time in kernels: %0.9f s\n", ocltime);
 			printf("Calculated FMAD: %u\n", *cpu_flops);
-			double FLOPS = *cpu_flops / allTimings;
-			printf("FLOPS: %0.3f\n", FLOPS);
+			fmads = *cpu_flops / ocltime;
+			printf("FLOPS: %0.3f\n", fmads);
 #endif
 			
 			#pragma region Syncing the memory with the GPU
@@ -456,8 +461,8 @@ namespace PJWFront
 			// Local storage for the synchronized (from multiple block maps) map
 			unsigned int *synchronized_map = new unsigned int[N];
 
-			for(int row=0; row<N; row++)
-				for(int block=0; block<BLOCK_NUM; block++)
+			for(uint row=0; row<N; row++)
+				for(uint block=0; block<BLOCK_NUM; block++)
 					if(gpu_map.v.at(block*N + row) != -1) 
 						synchronized_map[row] = gpu_map.v.at(block*N + row),
 						block=BLOCK_NUM;
