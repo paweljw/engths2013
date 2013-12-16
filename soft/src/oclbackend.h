@@ -5,7 +5,7 @@
 #include <assert.h>
 
 #include <stdio.h>
-#include <cstring>
+#include <string.h>
 #include <iostream>
 using namespace std;
 
@@ -425,7 +425,7 @@ namespace PJWFront
 				cl_int error = clFinish(queue);
 				if(error != CL_SUCCESS)
 				{
-					cout << "Error finishing queue [" << what << "]: " << oclErrorString(error) << endl;
+					cout << "Error finishing queue [" << what.c_str() << "]: " << oclErrorString(error) << endl;
 					exit(error);
 				}
 				

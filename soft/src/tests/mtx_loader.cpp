@@ -88,6 +88,7 @@ int main(int argc, char* argv[])
 			iss >> val;
 
 			gpuf.setRHS(counter, val);
+			cout << counter << endl;
 			counter++;
 			}
 		}

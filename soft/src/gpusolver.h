@@ -8,6 +8,7 @@
 
 namespace PJWFront
 {
+	// TODO: Are all these pragmas seriously necessary?!
 
 	static const char * __pjws__kernels = "#pragma OPENCL EXTENSION cl_khr_global_int32_base_atomics : enable"
 	"#pragma OPENCL EXTENSION cl_khr_local_int32_base_atomics : enable"
@@ -169,7 +170,7 @@ namespace PJWFront
 		/// @param _GWS Global work size, autocalculates unless nonzero provided
 		/// @param _NE Allowable numerical error (basically tells GPU abs(number) < numerical_error -> number = 0), set to a safe value unless provided by hand
 		/// @remark If an unreasonable value is provided for _LWS parameter, the constructor will override user's decision and try to salvage the situation.
-		GPUFrontal(int size, uint _LWS = 0, uint _GWS = 0, ScalarType _NE = FLT_MIN)
+		GPUFrontal(int size, uint _LWS = 192, uint _GWS = 0, ScalarType _NE = 0.0000001)
 		{
 			// Initialize OpenCL backend
 			backend = new ocl::OCLBackend();
@@ -182,6 +183,7 @@ namespace PJWFront
 	
 			// If LWS is not provided, it is calculated, somewhat forcefully
 			// An LWS larger than 32 will give poor performance, since that's usually the max workgroup size on NVidia cards
+			// NOTE: Above needs further verification - conflicting data (32 max size WG vs 192 microcores
 			if(_LWS == 0)
 				for(_LWS = N-1; _LWS > 0; _LWS--)
 					if(!(N % _LWS)) break;
@@ -267,7 +269,7 @@ namespace PJWFront
 			cl_mem gpu_N_handle = backend->sendData(&N, sizeof(uint));
 			
 			// TAG: B#1
-			uint localN = N/BLOCK_NUM;
+			uint localN = LWS;
 			cl_mem gpu_blocksize_handle = backend->sendData(&localN, sizeof(uint));
 			
 			uint lbn = BLOCK_NUM;

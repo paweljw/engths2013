@@ -12,24 +12,24 @@ IF(NOT "${CMAKE_HOSTNAME}" EQUAL "jack")
 	SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 ENDIF()
 
-set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/SharedLibs/boost")
-set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/SharedLibs/boost/stage/lib")
+set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/SharedLibraries/boost")
+set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/SharedLibraries/boost/stage/lib")
 
-set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/SharedLibs/CUDA/include")
-set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/SharedLibs/CUDA/lib/x64")
+set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/SharedLibraries/CUDA/include")
+set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/SharedLibraries/CUDA/lib/x64")
 
 SET(OPENCL_VENDOR "NVIDIA" CACHE STRING "Use specicic vendor SDK: NVIDIA, ATI, INTEL, IBM (default: NVIDIA)")
 FIND_PACKAGE(OpenCL REQUIRED)
 INCLUDE_DIRECTORIES(${OPENCL_INCLUDE_DIR})
 
-FIND_PACKAGE(Boost COMPONENTS log log_setup thread date_time filesystem system timer REQUIRED)
+FIND_PACKAGE(Boost 1.52.0 COMPONENTS log log_setup thread date_time filesystem system timer REQUIRED)
 IF (Boost_FOUND)
     INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 	LINK_DIRECTORIES ( ${Boost_LIBRARY_DIRS})
     ADD_DEFINITIONS( "-DHAS_BOOST" )
 	
-#	message(STATUS ${Boost_SYSTEM_LIBRARY})
-#	message(STATUS ${Boost_LIBRARIES})
+	message(STATUS ${Boost_SYSTEM_LIBRARY})
+	message(STATUS ${Boost_LIBRARIES})
 ENDIF()
 
 find_package(Doxygen)
