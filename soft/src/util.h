@@ -29,6 +29,14 @@ namespace PJWFront
 		}
 	} badex;
 	
+	static class NanException : public std::exception
+	{
+		virtual const char* what() const throw()
+		{
+			return "Probably QNAN in results.";
+		}
+	} nanex;
+	
 	namespace util
 	{
 		/// Reads a kernel from file (by filename)

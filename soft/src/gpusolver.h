@@ -141,6 +141,9 @@ namespace PJWFront
 
 		/// Size of an NxN matrix
 		uint N;
+		
+		uint fmads;
+		double ocltime;
 
 		/// Numerical error storage
 		ScalarType NUM_ERR;
@@ -336,10 +339,13 @@ namespace PJWFront
 			gpu_matrix.printMatrix();
 #endif
 
-			double allTimings = 0.0f;
+			ocltime = 0.0f;
 			#pragma endregion
 
 			#pragma region Solution loop
+			
+			uint last_cpu_ops = 0;
+			uint same_for = 0;
 			
 			do
 			{
@@ -351,14 +357,14 @@ namespace PJWFront
 				// Enqueue first kernel and let it finish
 				// Time first kernel
 				cl_event mangler_event = backend->enqueueEventKernel(Mangler, LWS, GWS);
-				allTimings += backend->timedFinish(mangler_event);
+				ocltime += backend->timedFinish(mangler_event);
 				
 				// Set last parameter to current handle for second kernel, enqueue and let it finish
 				backend->arg(Resolver, 7, gpu_ops);
 				
 				// Time second kernel
 				cl_event resolver_event = backend->enqueueEventKernel(Resolver, N, N);
-				allTimings += backend->timedFinish(resolver_event);				
+				ocltime += backend->timedFinish(resolver_event);				
 #else
 				backend->enqueueKernel(Mangler, LWS, GWS);
 				backend->finish("mangler");
@@ -399,9 +405,20 @@ namespace PJWFront
 				// Download operations data
 				backend->receiveData(gpu_ops, cpu_ops, sizeof(unsigned int));
 				
-//#ifdef __SOLVERDEBUG								
+#ifdef __SOLVERDEBUG								
 				cout << "[a] Cpu ops is " << *cpu_ops << endl;
-//#endif
+#endif
+				if(cpu_ops == last_cpu_ops)
+					same_for++;
+				else
+				{
+					last_cpu_ops = cpu_ops;
+					same_for = 0;
+				}
+				
+				if(same_for == 10)
+					throw nanex;
+
 			// Loop ends if no operations were needed
 			} while(*cpu_ops > 0);
 			
