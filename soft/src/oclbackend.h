@@ -81,7 +81,7 @@ namespace PJWFront
 							if(ciErrNum == CL_SUCCESS)
 							{
 								printf("platform %d: %s\n", i, chBuffer);
-								if(strstr(chBuffer, "NVIDIA") != NULL)
+								if(strstr(chBuffer, "INTEL") != NULL)
 								{
 									printf("selected platform %d\n", i);
 									*clSelectedPlatformID = clPlatformIDs[i];
@@ -202,7 +202,7 @@ namespace PJWFront
 				}
 
 				// Device setup
-				error = clGetDeviceIDs(platform, CL_DEVICE_TYPE_GPU, 1, &device, NULL);
+				error = clGetDeviceIDs(platform, CL_DEVICE_TYPE_CPU, 1, &device, NULL);
 				if (error != CL_SUCCESS) {
 					cout << "Error getting device ids: " << oclErrorString(error) << endl;
 				   exit(error);
@@ -414,7 +414,7 @@ namespace PJWFront
 				cl_int error = clFinish(queue);
 				if(error != CL_SUCCESS)
 				{
-					cout << "Error finishing queue: " << oclErrorString(error) << endl;
+					cout << "Error finishing non-named queue: " << oclErrorString(error) << endl;
 					exit(error);
 				}
 				
@@ -436,7 +436,7 @@ namespace PJWFront
 			/// @returns Total elapsed time for the event in seconds.
 			double timedFinish(cl_event event)
 			{
-				finish();
+				finish("timing event");
 				clWaitForEvents(1 , &event);
 				cl_ulong time_start, time_end;
 				double total_time;

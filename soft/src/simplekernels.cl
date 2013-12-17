@@ -47,7 +47,7 @@ __kernel void Mangler(
 	__global unsigned int* N)
 	{
 		int row_number = get_local_id(0) + get_group_id(0) * get_local_size(0);
-		
+		/*
 		if(row_number < *N)
 		{
 			while(true)
@@ -62,4 +62,5 @@ __kernel void Mangler(
 				else break;
 			}
 		}
+		*/
 	}

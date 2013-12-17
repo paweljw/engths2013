@@ -50,6 +50,7 @@ namespace PJWFront
 			std::ifstream file(filePath.c_str(), std::ifstream::in);
 
 			if(!file){
+				std::cout << "File not found: " << filename << std::endl;
 				throw std::exception();
 			}
 
