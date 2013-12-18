@@ -19,6 +19,8 @@ namespace PJWFront
 		/// @author Pawel J. Wal
 		class OCLBackend
 		{
+			string implementation;
+
 			// Basic platform info
 			
 			/// OpenCL context
@@ -81,7 +83,7 @@ namespace PJWFront
 							if(ciErrNum == CL_SUCCESS)
 							{
 								printf("platform %d: %s\n", i, chBuffer);
-								if(strstr(chBuffer, "NVIDIA") != NULL)
+								if(strstr(chBuffer, implementation.c_str()) != NULL)
 								{
 									printf("selected platform %d\n", i);
 									*clSelectedPlatformID = clPlatformIDs[i];
@@ -188,10 +190,17 @@ namespace PJWFront
 
 		public:
 		
-			/// The default constructor, which will setup the required OpenCL structs
-			/// A platform and device will be selected, a context and command queue will be created
 			OCLBackend()
 			{
+				OCLBackend("NVIDIA");
+			}
+		
+			/// The default constructor, which will setup the required OpenCL structs
+			/// A platform and device will be selected, a context and command queue will be created
+			OCLBackend(string _implementation)
+			{
+				implementation = _implementation;
+				
 				cl_int error;
 
 				// Platform setup
@@ -202,7 +211,7 @@ namespace PJWFront
 				}
 
 				// Device setup
-				error = clGetDeviceIDs(platform, CL_DEVICE_TYPE_GPU, 1, &device, NULL);
+				error = clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, 1, &device, NULL);
 				if (error != CL_SUCCESS) {
 					cout << "Error getting device ids: " << oclErrorString(error) << endl;
 				   exit(error);

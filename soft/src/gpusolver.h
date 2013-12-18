@@ -1,4 +1,4 @@
-#pragma once
+	#pragma once
 
 #include "util.h"
 #include "oclbackend.h"
@@ -75,10 +75,10 @@ namespace PJWFront
 		/// @param _GWS Global work size, autocalculates unless nonzero provided
 		/// @param _NE Allowable numerical error (basically tells GPU abs(number) < numerical_error -> number = 0), set to a safe value unless provided by hand
 		/// @remark If an unreasonable value is provided for _LWS parameter, the constructor will override user's decision and try to salvage the situation.
-		GPUFrontal(int size, uint _LWS = 192, uint _GWS = 0, ScalarType _NE = 0.0000001)
+		GPUFrontal(int size, uint _LWS = 192, uint _GWS = 0, std::string implementation = "NVIDIA", ScalarType _NE = 0.0000001)
 		{
 			// Initialize OpenCL backend
-			backend = new ocl::OCLBackend();
+			backend = new ocl::OCLBackend(implementation);
 
 			// Remember matrix size
 			N = size;
@@ -235,8 +235,8 @@ namespace PJWFront
 
 			#pragma region Solution loop
 			
-			uint last_cpu_ops = 0;
-			uint same_for = 0;
+			//uint last_cpu_ops = 0;
+			//uint same_for = 0;
 			
 			do
 			{
@@ -295,10 +295,10 @@ namespace PJWFront
 				// Download operations data
 				backend->receiveData(gpu_ops, cpu_ops, sizeof(unsigned int));
 				
-#ifdef __SOLVERDEBUG								
+#ifndef __SOLVERTIMING_SILENT
 				cout << "[a] Cpu ops is " << *cpu_ops << endl;
 #endif
-				if(*cpu_ops == last_cpu_ops)
+				/*if(*cpu_ops == last_cpu_ops)
 					same_for++;
 				else
 				{
@@ -306,17 +306,18 @@ namespace PJWFront
 					same_for = 0;
 				}
 				
-				if(same_for == 10)
-					throw nanex;
+				if(same_for == 100)
+					throw nanex;*/
 
 			// Loop ends if no operations were needed
 			} while(*cpu_ops > 0);
 			
 			#pragma endregion
 
-#ifdef __SOLVERTIMING
 			backend->receiveData(gpu_flops, cpu_flops, sizeof(unsigned int));
 			fmads = *cpu_flops / ocltime;
+			
+#ifdef __SOLVERTIMING
 			printf("Time in kernels: %0.9f s\n", ocltime);
 			printf("Calculated FMAD: %u\n", *cpu_flops);
 			printf("FLOPS: %0.3f\n", fmads);

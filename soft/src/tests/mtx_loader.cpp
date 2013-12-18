@@ -3,8 +3,8 @@
 #include <fstream>
 
 // #define __SOLVERDEBUG
-#define __SOLVERTIMING
-//#define __SOLVERTIMING_SILENT
+//#define __SOLVERTIMING
+#define __SOLVERTIMING_SILENT
 
 #include "gpusolver.h"
 
@@ -18,6 +18,8 @@ int main(int argc, char* argv[])
 	unsigned int _LWS = 192;
 	unsigned int _GWS = 0;
 	
+	string impl;
+	
 	if(argc > 3)
 	{
 		string sLWS = argv[3];
@@ -28,6 +30,11 @@ int main(int argc, char* argv[])
 		
 		isLWS >> _LWS;
 		isGWS >> _GWS;
+	}
+	
+	if(argc > 5)
+	{
+		impl = argv[5];
 	}
 	
 	fstream main;
@@ -67,7 +74,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	PJWFront::GPUFrontal<float> gpuf(N, _LWS, _GWS);
+	PJWFront::GPUFrontal<float> gpuf(N, _LWS, _GWS, impl);
 
 	cout << "MTX: " << mtx_main << endl;
 	cout << "RHS: " << mtx_rhs << endl;
@@ -123,8 +130,8 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
-	//cout << "Time:  " << gpuf.ocltime << "s" << endl;
-	//cout << "FMADs: " << gpuf.fmads << endl;
+	cout << "Time:  " << gpuf.ocltime << "s" << endl;
+	printf("FLOPS: %0.3f\n", gpuf.fmads);
 
 
 	return 0;
