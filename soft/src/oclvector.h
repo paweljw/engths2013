@@ -1,4 +1,7 @@
 #include "util.h"
+#include <iostream>
+
+using namespace std;
 
 namespace PJWFront
 {
@@ -90,6 +93,15 @@ namespace util
 			
 			for(uint i=0; i<size; i++)
 				v.at(i) = temp[i];
+		}
+		
+		void print_data()
+		{
+			for(uint i=0; i<size; i++)
+			{
+				cout << v.at(i) << " ";
+			}
+			cout << endl;
 		}
 	};
 }

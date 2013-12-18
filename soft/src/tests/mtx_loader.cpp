@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 
-#define __SOLVERDEBUG
+// #define __SOLVERDEBUG
 #define __SOLVERTIMING
 //#define __SOLVERTIMING_SILENT
 

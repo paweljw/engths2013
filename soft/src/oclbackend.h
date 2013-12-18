@@ -81,7 +81,7 @@ namespace PJWFront
 							if(ciErrNum == CL_SUCCESS)
 							{
 								printf("platform %d: %s\n", i, chBuffer);
-								if(strstr(chBuffer, "INTEL") != NULL)
+								if(strstr(chBuffer, "NVIDIA") != NULL)
 								{
 									printf("selected platform %d\n", i);
 									*clSelectedPlatformID = clPlatformIDs[i];
@@ -202,7 +202,7 @@ namespace PJWFront
 				}
 
 				// Device setup
-				error = clGetDeviceIDs(platform, CL_DEVICE_TYPE_CPU, 1, &device, NULL);
+				error = clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, 1, &device, NULL);
 				if (error != CL_SUCCESS) {
 					cout << "Error getting device ids: " << oclErrorString(error) << endl;
 				   exit(error);

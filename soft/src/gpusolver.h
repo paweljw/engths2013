@@ -128,11 +128,13 @@ namespace PJWFront
 			gpu_map = util::ocl_vector<int>(N, backend);
 			solution = std::vector<ScalarType> (N);
 			
-			cout << "Before ck" << endl;
 			// Precompile the kernels
 			CompileKernels();
 
-			cout << "After ck, done ctor"<< endl;
+			// MAP SETUP!!!
+			
+			for(uint i=0; i<N; i++)
+				gpu_map.v.at(i) = -1;
 		}
 
 		/// Setter for matrix values
@@ -172,7 +174,7 @@ namespace PJWFront
 			// Note: PCI-e data transfer happening below
 			cl_mem gpu_rhs_handle = gpu_rhs.ocl_handle();			
 			cl_mem gpu_map_handle = gpu_map.ocl_handle();
-
+			
 			cl_mem gpu_N_handle = backend->sendData(&N, sizeof(uint));
 
 			cl_mem gpu_mx_h1 = gpu_matrix.ocl_flat_handle();
