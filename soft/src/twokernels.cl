@@ -5,6 +5,23 @@
 #pragma OPENCL EXTENSION cl_khr_int64_base_atomics: enable
 #pragma OPENCL EXTENSION cl_khr_int64_extended_atomics: enable
 
+void atomic_add_local(volatile global float *source, const float operand) {
+    union {
+        unsigned int intVal;
+        float floatVal;
+    } newVal;
+ 
+    union {
+        unsigned int intVal;
+        float floatVal;
+    } prevVal;
+ 
+    do {
+        prevVal.floatVal = *source;
+        newVal.floatVal = prevVal.floatVal + operand;
+    } while (atomic_cmpxchg((volatile global unsigned int *)source, prevVal.intVal, newVal.intVal) != prevVal.intVal);
+}
+
 inline int CmGet(
 		const unsigned int row,
 		const unsigned int col,
@@ -15,23 +32,22 @@ inline int CmGet(
 inline unsigned int ReduceRows(
 		const unsigned int original,
 		const unsigned int offender,
-		const unsigned int begin,
+		const unsigned int function,
 		__global float* dataMatrix,
 		__global float* dataRhs,
 		__global unsigned int *N)
-	{
-	float multiplier = dataMatrix[CmGet(original, begin, N)] / dataMatrix[CmGet(offender, begin, N)];
+	{	
+	float multiplier = dataMatrix[original * *N + function] / dataMatrix[offender * *N + function];
 	multiplier *= -1;
 	
 	unsigned int flop = 2;
 	
-	for(int i=begin; i<(*N);i++)
+	for(unsigned int i = function; i < *N; i++)
 	{
-		int origpos = CmGet(original, i, N);
-		int ofpos = CmGet(offender, i, N);
-		flop += 2;
-		dataMatrix[origpos] += dataMatrix[ofpos] * multiplier;
+			atomic_add_local(&dataMatrix[original * *N + i], (dataMatrix[offender * *N + i] * multiplier));
+			flop += 2;
 	}
+				
 	dataRhs[original] += dataRhs[offender] * multiplier;
 	flop += 2;
     
@@ -121,37 +137,38 @@ __kernel void Resolver(
 		__global unsigned int *ops,
 		__global unsigned int *flop)
 	{
-	int threadID = get_local_id(0);
-	int blockID = get_group_id(0);
-	int param_block_size = get_local_size(0);
-	
-	int row = threadID + blockID * param_block_size;
-	
-	if(row < *N)
-	{
-		int first = -1;
-		int function = -1;
+		int threadID = get_local_id(0);
+		int blockID = get_group_id(0);
+		int param_block_size = get_local_size(0);
 		
-		unsigned int lops = 0;
-		unsigned int local_flop = 0;
+		int row = threadID + blockID * param_block_size;
 		
-		for(int i=0; i<(*BLOX); i++)
+		if(row < *N)
 		{
-			if(map[i*(*N)+row] != -1)
+			int first = -1;
+			int function = -1;
+			
+			unsigned int lops = 0;
+			unsigned int local_flop = 0;
+			
+			for(int block=0; block<(*BLOX); block++)
 			{
-				if(first == -1){
-					first = map[i*(*N)+row];
-					function = RowFunction(row, dataMatrix, N);
-					continue;
-				} else {
-					int thisRow = map[i*(*N)+row];
-					local_flop += ReduceRows(thisRow, first, function, dataMatrix, dataRhs, N);
-					lops++;
+				if(map[block*(*N)+row] != -1)
+				{
+					if(first == -1){
+						first = map[block*(*N)+row];
+						function = row;
+						continue;
+					} else {
+						int thisRow = map[block*(*N)+row];
+						local_flop += ReduceRows(thisRow, first, function, dataMatrix, dataRhs, N);
+						lops++;
+					}
 				}
 			}
+			
+			atomic_add(ops, lops);
+			atomic_add(flop, local_flop);
 		}
 		
-		atomic_add(ops, lops);
-		atomic_add(flop, local_flop);
 	}
-}";
