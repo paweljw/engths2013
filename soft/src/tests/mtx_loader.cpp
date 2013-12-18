@@ -2,8 +2,8 @@
 #include <string>
 #include <fstream>
 
-//#define __SOLVERDEBUG
-//#define __SOLVERTIMING
+// #define __SOLVERDEBUG
+#define __SOLVERTIMING
 //#define __SOLVERTIMING_SILENT
 
 #include "gpusolver.h"
