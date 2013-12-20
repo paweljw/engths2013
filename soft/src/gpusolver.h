@@ -254,7 +254,7 @@ namespace PJWFront
 				backend->arg(Resolver, 5, gpu_ops);
 				
 				// Time second kernel
-				cl_event resolver_event = backend->enqueueEventKernel(Resolver, LWS, GWS);
+				cl_event resolver_event = backend->enqueueEventKernel(Resolver, N, N);
 				ocltime += backend->timedFinish(resolver_event);				
 #else
 				backend->enqueueKernel(Mangler, LWS, GWS);
