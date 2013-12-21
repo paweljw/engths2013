@@ -1,9 +1,24 @@
+#if defined(cl_amd_fp64) || defined(cl_khr_fp64)
+	#ifdef cl_amd_fp64
+		#pragma OPENCL EXTENSION cl_amd_fp64 : enable
+	#endif
+	#ifdef cl_khr_fp64
+		#pragma OPENCL EXTENSION cl_khr_fp64 : enable
+	#endif
+#else
+	#define double float
+#endif
+
 #pragma OPENCL EXTENSION cl_khr_global_int32_base_atomics : enable
 #pragma OPENCL EXTENSION cl_khr_local_int32_base_atomics : enable
 #pragma OPENCL EXTENSION cl_khr_global_int32_extended_atomics : enable
 #pragma OPENCL EXTENSION cl_khr_local_int32_extended_atomics : enable
 #pragma OPENCL EXTENSION cl_khr_int64_base_atomics: enable
 #pragma OPENCL EXTENSION cl_khr_int64_extended_atomics: enable
+
+
+
+#pragma OPENCL EXTENSION cl_khr_fp64 : enable
 
 inline int CmGet(
 		const unsigned int row,
@@ -16,11 +31,11 @@ inline unsigned int ReduceRows(
 		const unsigned int original,
 		const unsigned int offender,
 		const unsigned int function,
-		__global float* dataMatrix,
-		__global float* dataRhs,
+		__global double* dataMatrix,
+		__global double* dataRhs,
 		__global unsigned int *N)
 	{	
-	float multiplier = dataMatrix[CmGet(original, function, N)] / dataMatrix[CmGet(offender, function, N)];
+	double multiplier = dataMatrix[CmGet(original, function, N)] / dataMatrix[CmGet(offender, function, N)];
 	multiplier *= -1;
 	
 	unsigned int flop = 2;
@@ -40,7 +55,7 @@ inline unsigned int ReduceRows(
     
 	return flop;
 }
-inline float ___abs(float val) 
+inline double ___abs(double val) 
 { 
 	if(val < 0) 
 		return val*-1.0f; 
@@ -49,9 +64,10 @@ inline float ___abs(float val)
 
 inline unsigned int RowFunction(
 		unsigned int row,
-		__global float* dataMatrix,
+		__global double* dataMatrix,
 		__global unsigned int *N)
 		{
+		if(!(row < *N)) return *N;
 		
 		unsigned int beginAt = row * *N;
 		
@@ -69,8 +85,8 @@ inline unsigned int RowFunction(
 }
 
 __kernel void Mangler(
-	__global float* dataMatrix,
-	__global float* dataRhs, 
+	__global double* dataMatrix,
+	__global double* dataRhs, 
 	__global int* map, 
 	__global unsigned int* N,
 	__global unsigned int *flop) 
@@ -132,8 +148,8 @@ __kernel void Mangler(
 //	printf("row %d done completely\n", rnumber);
 }
 __kernel void Resolver(
-		__global float* dataMatrix,
-		__global float* dataRhs,
+		__global double* dataMatrix,
+		__global double* dataRhs,
 		__global unsigned int* map,
 		__global unsigned int *N,
 		__global unsigned int *BLOX,
