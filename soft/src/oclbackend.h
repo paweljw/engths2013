@@ -217,6 +217,15 @@ namespace PJWFront
 				   exit(error);
 				}
 
+				// Read what the device is
+				size_t valueSize;
+				char* value;
+				
+				clGetDeviceInfo(device, CL_DEVICE_NAME, 0, NULL, &valueSize);
+				value = (char*)malloc(valueSize);
+				clGetDeviceInfo(device, CL_DEVICE_NAME, valueSize, value, NULL);
+				cout << "Using device " << value << endl;
+
 				// Context setup
 				context = clCreateContext(0, 1, &device, NULL, NULL, &error);
 				if (error != CL_SUCCESS) {
