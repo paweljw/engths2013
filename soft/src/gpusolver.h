@@ -123,7 +123,7 @@ namespace PJWFront
 
 			// Initialize all the storages
 			gpu_matrix = util::flat_matrix<ScalarType>(N, backend);
-			cpu_matrix = std::vector< std::map< unsigned int, float> > (N*N);
+			cpu_matrix = std::vector< std::map< unsigned int, ScalarType> > (N*N);
 			gpu_rhs = util::ocl_vector<ScalarType>(N, backend);
 			gpu_map = util::ocl_vector<int>(BLOCK_NUM * N, backend);
 			solution = std::vector<ScalarType> (N);
