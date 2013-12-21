@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 
-#define __SOLVERDEBUG
+//#define __SOLVERDEBUG
 //#define __SOLVERTIMING
 #define __SOLVERTIMING_SILENT
 
@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	PJWFront::GPUFrontal<float> gpuf(N, _LWS, _GWS, impl);
+	PJWFront::GPUFrontal<double> gpuf(N, _LWS, _GWS, impl);
 
 	cout << "MTX: " << mtx_main << endl;
 	cout << "RHS: " << mtx_rhs << endl;
