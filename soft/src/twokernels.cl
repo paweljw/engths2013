@@ -1,3 +1,14 @@
+#if defined(cl_amd_fp64) || defined(cl_khr_fp64)
+	#ifdef cl_amd_fp64
+		#pragma OPENCL EXTENSION cl_amd_fp64 : enable
+	#endif
+	#ifdef cl_khr_fp64
+		#pragma OPENCL EXTENSION cl_khr_fp64 : enable
+	#endif
+#else
+	#define double float
+#endif
+
 #pragma OPENCL EXTENSION cl_khr_global_int32_base_atomics : enable
 #pragma OPENCL EXTENSION cl_khr_local_int32_base_atomics : enable
 #pragma OPENCL EXTENSION cl_khr_global_int32_extended_atomics : enable
@@ -5,22 +16,9 @@
 #pragma OPENCL EXTENSION cl_khr_int64_base_atomics: enable
 #pragma OPENCL EXTENSION cl_khr_int64_extended_atomics: enable
 
-void atomic_add_local(volatile global float *source, const float operand) {
-    union {
-        unsigned int intVal;
-        float floatVal;
-    } newVal;
- 
-    union {
-        unsigned int intVal;
-        float floatVal;
-    } prevVal;
- 
-    do {
-        prevVal.floatVal = *source;
-        newVal.floatVal = prevVal.floatVal + operand;
-    } while (atomic_cmpxchg((volatile global unsigned int *)source, prevVal.intVal, newVal.intVal) != prevVal.intVal);
-}
+
+
+#pragma OPENCL EXTENSION cl_khr_fp64 : enable
 
 inline int CmGet(
 		const unsigned int row,
@@ -33,19 +31,23 @@ inline unsigned int ReduceRows(
 		const unsigned int original,
 		const unsigned int offender,
 		const unsigned int function,
-		__global float* dataMatrix,
-		__global float* dataRhs,
+		__global double* dataMatrix,
+		__global double* dataRhs,
 		__global unsigned int *N)
 	{	
-	float multiplier = dataMatrix[original * *N + function] / dataMatrix[offender * *N + function];
+	double multiplier = dataMatrix[CmGet(original, function, N)] / dataMatrix[CmGet(offender, function, N)];
 	multiplier *= -1;
 	
 	unsigned int flop = 2;
 	
 	for(unsigned int i = function; i < *N; i++)
 	{
-			atomic_add_local(&dataMatrix[original * *N + i], (dataMatrix[offender * *N + i] * multiplier));
-			flop += 2;
+		if(i==function) 
+			dataMatrix[CmGet(original, i, N)] = 0;
+		else 
+			dataMatrix[CmGet(original, i, N)] += (dataMatrix[CmGet(offender, i, N)] * multiplier);
+			
+		flop += 2;
 	}
 				
 	dataRhs[original] += dataRhs[offender] * multiplier;
@@ -53,7 +55,7 @@ inline unsigned int ReduceRows(
     
 	return flop;
 }
-inline float ___abs(float val) 
+inline double ___abs(double val) 
 { 
 	if(val < 0) 
 		return val*-1.0f; 
@@ -62,16 +64,19 @@ inline float ___abs(float val)
 
 inline unsigned int RowFunction(
 		unsigned int row,
-		__global float* dataMatrix,
+		__global double* dataMatrix,
 		__global unsigned int *N)
 		{
+		if(!(row < *N)) return *N;
 		
 		unsigned int beginAt = row * *N;
 		
 		for(unsigned int ix = 0; ix < *N; ix++)
 		{
-			if(___abs(dataMatrix[beginAt+ix]) <= --TAG_NUMERICAL_ERROR--) 
-				dataMatrix[beginAt+ix] = 0;
+			if(___abs(dataMatrix[CmGet(row, ix, N)]) <= --TAG_NUMERICAL_ERROR--) 
+				dataMatrix[CmGet(row, ix, N)] = 0;
+			if(isnan(dataMatrix[CmGet(row, ix, N)]))
+				dataMatrix[CmGet(row, ix, N)] = 0;
 			if(dataMatrix[beginAt+ix] != 0) 
 				return ix;
 		}
@@ -80,8 +85,8 @@ inline unsigned int RowFunction(
 }
 
 __kernel void Mangler(
-	__global float* dataMatrix,
-	__global float* dataRhs, 
+	__global double* dataMatrix,
+	__global double* dataRhs, 
 	__global int* map, 
 	__global unsigned int* N,
 	__global unsigned int *flop) 
@@ -100,9 +105,13 @@ __kernel void Mangler(
 				localMap[i] = -1;
 	}
 	
+	int rnumber = blockID * param_block_size + threadID;
+	
+//	printf("row %d before first fence\n", rnumber);
+	
 	barrier(CLK_LOCAL_MEM_FENCE);
 	
-	int rnumber = blockID * param_block_size + threadID;
+//	printf("row %d after first fence\n", rnumber);
 	
 	if(rnumber < (*N))
 	{
@@ -110,27 +119,37 @@ __kernel void Mangler(
 			int function = RowFunction(rnumber, dataMatrix, N);
 			if(function == *N) break;
 			int offender = atomic_cmpxchg(&(localMap[function]), -1, rnumber);
+			
+//			printf("row %d function %d offender %d\n", rnumber, function, offender);
+			
 			if(offender != -1)
 				local_flop += ReduceRows(rnumber, offender, function, dataMatrix, dataRhs, N);
+			
 			else break;
 		}
+	}
+	
+//	printf("row %d before second fence\n", rnumber);
+	
+	barrier(CLK_LOCAL_MEM_FENCE);
+	
+//	printf("row %d after second fence\n", rnumber);
 		
-		barrier(CLK_LOCAL_MEM_FENCE);
-
-		if(threadID == 0)
+	if(threadID == 0)
+	{
+		for(int i=0; i<(*N); i++)
 		{
-			for(int i=0; i<(*N); i++)
-			{
-				map[blockID*(*N)+i] = localMap[i];
-			}
+			map[blockID*(*N)+i] = localMap[i];
 		}
 	}
 	
 	atomic_add(flop, local_flop);
+	
+//	printf("row %d done completely\n", rnumber);
 }
 __kernel void Resolver(
-		__global float* dataMatrix,
-		__global float* dataRhs,
+		__global double* dataMatrix,
+		__global double* dataRhs,
 		__global unsigned int* map,
 		__global unsigned int *N,
 		__global unsigned int *BLOX,

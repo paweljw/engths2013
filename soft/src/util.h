@@ -149,7 +149,8 @@ namespace PJWFront
 		/// @param value The float that is to be cast to a string that will replace tag
 		/// @returns The kernel string after performing the replacement operation
 		/// @todo It would be better if the boost function was replaced with a custom one
-		inline std::string replaceKernelTag(std::string kernel, std::string tag, float value)
+		template <typename ScalarType>
+		inline std::string replaceKernelTag(std::string kernel, std::string tag, ScalarType value)
 		{
 			std::string new_val = boost::lexical_cast<std::string>(value);
 			
