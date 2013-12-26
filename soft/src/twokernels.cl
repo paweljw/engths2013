@@ -1,12 +1,11 @@
 #if defined(cl_amd_fp64) || defined(cl_khr_fp64)
 	#ifdef cl_amd_fp64
 		#pragma OPENCL EXTENSION cl_amd_fp64 : enable
-	#endif
-	#ifdef cl_khr_fp64
+	#elifdef cl_khr_fp64
 		#pragma OPENCL EXTENSION cl_khr_fp64 : enable
 	#endif
 #else
-	#define double float
+	#define float double
 #endif
 
 #pragma OPENCL EXTENSION cl_khr_global_int32_base_atomics : enable
@@ -15,8 +14,6 @@
 #pragma OPENCL EXTENSION cl_khr_local_int32_extended_atomics : enable
 #pragma OPENCL EXTENSION cl_khr_int64_base_atomics: enable
 #pragma OPENCL EXTENSION cl_khr_int64_extended_atomics: enable
-
-
 
 #pragma OPENCL EXTENSION cl_khr_fp64 : enable
 
