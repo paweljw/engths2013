@@ -34,12 +34,20 @@ namespace PJWFront
 			
 			/// OpenCL device placeholder
 			cl_device_id device;
-
+			cl_device_id* devices;
+			
 			/// This OpenCL backend will only hold a single program
 			cl_program program;
 
 			cl_int enumerateDevices()
 			{
+				int i, j;
+				char* value;
+				size_t valueSize;
+				cl_uint deviceCount;
+				
+				cl_uint maxComputeUnits;
+	
 				clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, 0, NULL, &deviceCount);
 				devices = (cl_device_id*) malloc(sizeof(cl_device_id) * deviceCount);
 				clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, deviceCount, devices, NULL);
@@ -81,7 +89,6 @@ namespace PJWFront
 					printf(" %d.%d Parallel compute units: %d\n", j+1, 4, maxComputeUnits);
 
 				}
-				free(devices);
 			}
 			
 			/// A helper function to get and select an OpenCL platform
@@ -238,12 +245,17 @@ namespace PJWFront
 		
 			OCLBackend()
 			{
-				OCLBackend("NVIDIA");
+				OCLBackend("NVIDIA", 0);
+			}
+		
+			OCLBackend(string _implementation)
+			{
+				OCLBackend(_implementation, 0);
 			}
 		
 			/// The default constructor, which will setup the required OpenCL structs
 			/// A platform and device will be selected, a context and command queue will be created
-			OCLBackend(string _implementation)
+			OCLBackend(string _implementation, unsigned int device_id)
 			{
 				implementation = _implementation;
 				
@@ -265,6 +277,8 @@ namespace PJWFront
 
 				enumerateDevices();
 				
+				device = devices[device_id];
+				
 				// Read what the device is
 				size_t valueSize;
 				char* value;
@@ -272,7 +286,8 @@ namespace PJWFront
 				clGetDeviceInfo(device, CL_DEVICE_NAME, 0, NULL, &valueSize);
 				value = (char*)malloc(valueSize);
 				clGetDeviceInfo(device, CL_DEVICE_NAME, valueSize, value, NULL);
-				cout << "Using device " << value << endl;
+				
+				cout << "Using device #" << device_id << ": " << value << endl;
 
 				// Context setup
 				context = clCreateContext(0, 1, &device, NULL, NULL, &error);
