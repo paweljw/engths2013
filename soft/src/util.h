@@ -1,10 +1,9 @@
 #pragma once
 
-#include <boost/algorithm/string/replace.hpp>
-#include <boost/lexical_cast.hpp>
 #include <fstream>
 #include <map>
 #include <vector>
+#include <string>
 
 typedef unsigned int uint;
 
@@ -118,15 +117,24 @@ namespace PJWFront
 			return bw;
 		}
 
+		void myReplace(std::string& str, const std::string& oldStr, const std::string& newStr)
+		{
+		  size_t pos = 0;
+		  while((pos = str.find(oldStr, pos)) != std::string::npos)
+		  {
+		     str.replace(pos, oldStr.length(), newStr);
+		     pos += newStr.length();
+  		}		
+		}
+
 		/// A function to replace a tag (=a particular string) in a kernel string. Just a simple helper, really.
 		/// @param kernel The string to perform replacement on
 		/// @param tag The string to be replaced
 		/// @param value The string that will replace tag
 		/// @returns The kernel string after performing the replacement operation
-		/// @todo It would be better if the boost function was replaced with a custom one
 		inline std::string replaceKernelTag(std::string kernel, std::string tag, std::string value)
 		{
-			boost::replace_all(kernel, tag, value);
+			myReplace(kernel, tag, value);
 			return kernel;
 		}
 		
@@ -135,12 +143,12 @@ namespace PJWFront
 		/// @param tag The string to be replaced
 		/// @param value The uint that is to be cast to a string that will replace tag
 		/// @returns The kernel string after performing the replacement operation
-		/// @todo It would be better if the boost function was replaced with a custom one
 		inline std::string replaceKernelTag(std::string kernel, std::string tag, uint value)
 		{
-			std::string new_val = boost::lexical_cast<std::string>(value);
+			char* val = new char[25];
+			sprintf(val, "%d", value);
 			
-			return replaceKernelTag(kernel, tag, new_val);	
+			return replaceKernelTag(kernel, tag, std::string(val));	
 		}
 
 		/// A function to replace a tag (=a particular string) in a kernel string with a float value.
@@ -148,13 +156,13 @@ namespace PJWFront
 		/// @param tag The string to be replaced
 		/// @param value The float that is to be cast to a string that will replace tag
 		/// @returns The kernel string after performing the replacement operation
-		/// @todo It would be better if the boost function was replaced with a custom one
 		template <typename ScalarType>
 		inline std::string replaceKernelTag(std::string kernel, std::string tag, ScalarType value)
 		{
-			std::string new_val = boost::lexical_cast<std::string>(value);
+			char* val = new char[25];
+			sprintf(val, "%f", value);
 			
-			return replaceKernelTag(kernel, tag, new_val);	
+			return replaceKernelTag(kernel, tag, std::string(val));	
 		}
 	}		
 }

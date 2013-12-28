@@ -1,0 +1,1541 @@
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 512
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.401942s
+FLOPS: 10054524.880
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 256
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.912359s
+FLOPS: 4409273.529
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 128
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  1.22339s
+FLOPS: 3542162.868
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 64
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.792147s
+FLOPS: 5539115.279
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 32
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.534848s
+FLOPS: 8734917.593
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 16
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.391903s
+FLOPS: 12224312.129
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 8
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.386062s
+FLOPS: 12203279.501
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 4
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.48072s
+FLOPS: 9398885.193
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 2
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.660457s
+FLOPS: 6603162.653
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 512
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.412227s
+FLOPS: 9882257.569
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1512
+LWS: 1000
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 500
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 250
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 125
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 100
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 50
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 25
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1002
+LWS: 10
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1000
+LWS: 4
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.399341s
+FLOPS: 2784589.995
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 512
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0240195s
+FLOPS: 15465442.061
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 1024
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_OUT_OF_RESOURCES
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 512
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.902408s
+FLOPS: 2224102.781
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 256
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.69584s
+FLOPS: 2887296.328
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 128
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.556173s
+FLOPS: 3619722.901
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 64
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.479394s
+FLOPS: 4216537.938
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 32
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.440595s
+FLOPS: 4625038.194
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 16
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.43818s
+FLOPS: 4722971.605
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 8
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.481247s
+FLOPS: 4432238.885
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 4
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.639975s
+FLOPS: 3532947.812
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 2
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  1.5289s
+FLOPS: 1646277.816
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 1024
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_OUT_OF_RESOURCES
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 2048
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 1024
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_OUT_OF_RESOURCES
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 512
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 256
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 128
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 64
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 32
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 16
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 8
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 4
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 2
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 2048
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 3200
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 1600
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 800
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_OUT_OF_RESOURCES
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 400
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 200
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 100
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 50
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 25
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 16
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 8
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 4
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 2
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 3200
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 4800
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 2400
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 1200
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 600
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 300
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 150
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 75
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 25
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 5
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+selected platform 0
+1. Device: GeForce GTX 550 Ti
+ 1.1 Hardware version: OpenCL 1.1 CUDA
+ 1.2 Software version: 331.20
+ 1.3 OpenCL C version: OpenCL C 1.1 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	1024
+Using device GeForce GTX 550 Ti
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 4800
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE

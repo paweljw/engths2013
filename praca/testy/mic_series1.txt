@@ -1,0 +1,2389 @@
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 512
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.231683s
+FLOPS: 21985972.696
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 256
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.476406s
+FLOPS: 10634896.677
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 128
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.539495s
+FLOPS: 9178759.355
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 64
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.420325s
+FLOPS: 11312142.769
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 32
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.347669s
+FLOPS: 13702662.548
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 16
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.405612s
+FLOPS: 11811137.176
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 8
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.424694s
+FLOPS: 11120390.740
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 4
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.853388s
+FLOPS: 5298746.540
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 2
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  1.21014s
+FLOPS: 3603798.021
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 512
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.231551s
+FLOPS: 21998475.826
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1512
+LWS: 1000
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 500
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 250
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 125
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 100
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 50
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 25
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1002
+LWS: 10
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1000
+LWS: 4
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.210997s
+FLOPS: 2645653.830
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 512
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.464568s
+FLOPS: 3425517.805
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 1024
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.12013s
+FLOPS: 16690256.534
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 512
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.172794s
+FLOPS: 11615269.393
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 256
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.182363s
+FLOPS: 11016995.577
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 128
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.162469s
+FLOPS: 12391272.797
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 64
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.162853s
+FLOPS: 12412347.922
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 32
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.192496s
+FLOPS: 10586036.506
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 16
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.291931s
+FLOPS: 7089033.892
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 8
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.602617s
+FLOPS: 3539561.271
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 4
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  1.50322s
+FLOPS: 1504101.795
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 2
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  5.56793s
+FLOPS: 452053.113
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 1024
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.120148s
+FLOPS: 16687752.328
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 2048
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  16.8862s
+FLOPS: 11552864.222
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 1024
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  35.6561s
+FLOPS: 5443941.659
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 512
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  30.0566s
+FLOPS: 6342861.379
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 256
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  22.941s
+FLOPS: 8097301.988
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 128
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  17.8902s
+FLOPS: 10194650.752
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 64
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  15.7239s
+FLOPS: 11476088.510
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 32
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  15.1397s
+FLOPS: 11662202.442
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 16
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  17.3282s
+FLOPS: 10017062.478
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 8
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  19.4299s
+FLOPS: 8699216.755
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 4
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  33.2385s
+FLOPS: 4871583.007
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 2
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  69.8066s
+FLOPS: 2307214.285
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 2048
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  16.8877s
+FLOPS: 11551864.194
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 3200
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.222599s
+FLOPS: 130117.581
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 1600
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.36414s
+FLOPS: 130724.383
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 800
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.234182s
+FLOPS: 252367.754
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 400
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.135467s
+FLOPS: 514058.274
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 200
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.097734s
+FLOPS: 877012.857
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 100
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0624245s
+FLOPS: 1276262.215
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 50
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0550635s
+FLOPS: 2211484.311
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 25
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0526643s
+FLOPS: 2332281.887
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 16
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0928124s
+FLOPS: 3365281.528
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 8
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.124046s
+FLOPS: 3643271.091
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 4
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.171405s
+FLOPS: 2636649.205
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 2
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.286009s
+FLOPS: 1580137.484
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 3200
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.222654s
+FLOPS: 130085.328
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 4800
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_OUT_OF_RESOURCES
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 2400
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.77114s
+FLOPS: 90230.025
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 1200
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.470114s
+FLOPS: 148062.022
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 600
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.349109s
+FLOPS: 238292.377
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 300
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.203262s
+FLOPS: 552999.715
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 150
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.116842s
+FLOPS: 876707.020
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 75
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0973206s
+FLOPS: 1767621.527
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 25
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.102816s
+FLOPS: 2531402.958
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 5
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.343878s
+FLOPS: 3273944.250
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+1. Device:        Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 16
+	Max Work Group Size:	8192
+2. Device: Intel(R) Many Integrated Core Acceleration Card
+ 2.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 2.2 Software version: 1.2
+ 2.3 OpenCL C version: OpenCL C 1.2 
+ 2.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+3. Device: Intel(R) Many Integrated Core Acceleration Card
+ 3.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 3.2 Software version: 1.2
+ 3.3 OpenCL C version: OpenCL C 1.2 
+ 3.4 Parallel compute units: 240
+	Max Work Group Size:	8192
+Using device Intel(R) Many Integrated Core Acceleration Card
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 4800
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_OUT_OF_RESOURCES

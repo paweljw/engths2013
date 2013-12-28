@@ -12,36 +12,12 @@ IF(NOT "${CMAKE_HOSTNAME}" EQUAL "jack")
 	SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 ENDIF()
 
-set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/SharedLibraries/boost")
-set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/SharedLibraries/boost/stage/lib")
+set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "/usr/include")
+set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "/usr/lib")
 
-set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/SharedLibraries/CUDA/include")
-set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/SharedLibraries/CUDA/lib/x64")
-
-SET(OPENCL_VENDOR "NVIDIA" CACHE STRING "Use specicic vendor SDK: NVIDIA, ATI, INTEL, IBM (default: NVIDIA)")
+SET(OPENCL_VENDOR "INTEL" CACHE STRING "Use specicic vendor SDK: NVIDIA, ATI, INTEL, IBM (default: NVIDIA)")
 FIND_PACKAGE(OpenCL REQUIRED)
 INCLUDE_DIRECTORIES(${OPENCL_INCLUDE_DIR})
-
-FIND_PACKAGE(Boost 1.52.0 COMPONENTS log log_setup thread date_time filesystem system timer REQUIRED)
-IF (Boost_FOUND)
-    INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
-	LINK_DIRECTORIES ( ${Boost_LIBRARY_DIRS})
-    ADD_DEFINITIONS( "-DHAS_BOOST" )
-	
-	message(STATUS ${Boost_SYSTEM_LIBRARY})
-	message(STATUS ${Boost_LIBRARIES})
-ENDIF()
-
-find_package(Doxygen)
-if(DOXYGEN_FOUND)
-	configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
-	add_custom_target(doc ALL
-	${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
-	WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-	COMMENT "Generating API documentation with Doxygen" VERBATIM
-)
-	file(MAKE_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/doc/html")
-endif(DOXYGEN_FOUND)
 
 include_directories("src/")
 
