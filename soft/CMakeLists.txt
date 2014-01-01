@@ -22,6 +22,8 @@ SET(OPENCL_VENDOR "NVIDIA" CACHE STRING "Use specicic vendor SDK: NVIDIA, ATI, I
 FIND_PACKAGE(OpenCL REQUIRED)
 INCLUDE_DIRECTORIES(${OPENCL_INCLUDE_DIR})
 
+SET(Boost_USE_STATIC_LIBS ON)
+
 FIND_PACKAGE(Boost 1.52.0 COMPONENTS log log_setup thread date_time filesystem system timer REQUIRED)
 IF (Boost_FOUND)
     INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
@@ -43,6 +45,12 @@ if(DOXYGEN_FOUND)
 	file(MAKE_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/doc/html")
 endif(DOXYGEN_FOUND)
 
+find_package(OpenMP)
+if (OPENMP_FOUND)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+endif()
+
 include_directories("src/")
 
 IF(MSVC)
@@ -54,36 +62,8 @@ ENDIF()
 
 enable_testing()
 
-#1 opencl_sanity
-add_executable(test_openclsanity src/tests/openclsanity.cpp)
-
-target_link_libraries(test_openclsanity
-			${OPENCL_LIBRARIES} 
-)
-
-add_test(OPENCL_SANITY ${CMAKE_CURRENT_BINARY_DIR}/test_openclsanity)
-
-#2 shortmatrix_sanity
-
-add_executable(test_shortmatrixsanity src/tests/shortmatrixsanity.cpp)
-
-target_link_libraries(test_shortmatrixsanity ${OPENCL_LIBRARIES})
-
-add_test(SHORTMATRIX_SANITY ${CMAKE_CURRENT_BINARY_DIR}/test_shortmatrixsanity)
-
-#3 solver instantiation
-
-add_executable(test_solution src/tests/solution.cpp)
-
-target_link_libraries(test_solution ${OPENCL_LIBRARIES} ${Boost_LIBRARIES})
-
-add_test(SOLUTION ${CMAKE_CURRENT_BINARY_DIR}/test_solution)
-
 #4-n solver stresstests
 
 add_executable(mtx_loader src/tests/mtx_loader.cpp)
 
-target_link_libraries(mtx_loader ${OPENCL_LIBRARIES})
-
-add_test(MTX_LDR ${CMAKE_CURRENT_BINARY_DIR}/mtx_loader build/mtx/sherman1.mtx build/mtx/sherman1_rhs1.mtx)
-
+target_link_libraries(mtx_loader ${OPENCL_LIBRARIES} ${Boost_LIBRARIES})
