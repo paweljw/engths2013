@@ -1,0 +1,1663 @@
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 512
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.0125189s
+FLOPS: 408000934.268
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 256
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.0199413s
+FLOPS: 255039760.497
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 128
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.017611s
+FLOPS: 287435788.792
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 64
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.0159527s
+FLOPS: 312750796.386
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 32
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.015488s
+FLOPS: 321575969.267
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 16
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.0196005s
+FLOPS: 248939922.622
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 8
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.0264849s
+FLOPS: 178239981.224
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 4
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.0521008s
+FLOPS: 86487895.190
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 2
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.124654s
+FLOPS: 34855958.765
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/512.mtx
+RHS: FAKE
+GWS: 512
+LWS: 512
+N:   512
+M:   512
+DP:   2480
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.012553s
+FLOPS: 406893481.148
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1512
+LWS: 1000
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 500
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 250
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 125
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 100
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 50
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1012
+LWS: 25
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1002
+LWS: 10
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_INVALID_WORK_GROUP_SIZE
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1000
+LWS: 4
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0404204s
+FLOPS: 14937122.789
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: sherman1.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 512
+N:   1000
+M:   1000
+DP:   3750
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.034329s
+FLOPS: 49255093.885
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 1024
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.00440498s
+FLOPS: 455166652.289
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 512
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.0044413s
+FLOPS: 451905319.656
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 256
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.00401634s
+FLOPS: 500231056.366
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 128
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.00363133s
+FLOPS: 554395374.256
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 64
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.00389866s
+FLOPS: 518481734.750
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 32
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.00704224s
+FLOPS: 289363817.027
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 16
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.016115s
+FLOPS: 128421526.463
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 8
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.0513739s
+FLOPS: 41519131.492
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 4
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.177891s
+FLOPS: 12710041.874
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 2
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.691402s
+FLOPS: 3640431.616
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/1000.mtx
+RHS: FAKE
+GWS: 1024
+LWS: 1024
+N:   1000
+M:   1000
+DP:   3996
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.00437922s
+FLOPS: 457844509.154
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 2048
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.501316s
+FLOPS: 389143239.155
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 1024
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.805151s
+FLOPS: 242241450.632
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 512
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.639698s
+FLOPS: 304213190.235
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 256
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.540018s
+FLOPS: 357813776.516
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 128
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.52947s
+FLOPS: 361101823.734
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 64
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.616178s
+FLOPS: 306533223.277
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 32
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.785866s
+FLOPS: 228154503.569
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 16
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  1.23866s
+FLOPS: 141116733.069
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 8
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  1.89658s
+FLOPS: 89007546.435
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 4
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  3.70452s
+FLOPS: 43751770.928
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 2
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  23.2128s
+FLOPS: 6932668.971
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/2048.mtx
+RHS: FAKE
+GWS: 2048
+LWS: 2048
+N:   2048
+M:   2048
+DP:   10114
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Time:  0.502786s
+FLOPS: 388005607.879
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 3200
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0202825s
+FLOPS: 1428028.103
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 1600
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0333037s
+FLOPS: 1428369.992
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 800
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0179278s
+FLOPS: 3379675.250
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 400
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0154172s
+FLOPS: 3930038.695
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 200
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0134972s
+FLOPS: 4897756.572
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 100
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0127798s
+FLOPS: 5105699.322
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 50
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0130508s
+FLOPS: 9018941.816
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 25
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0211899s
+FLOPS: 5554723.922
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 16
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0163071s
+FLOPS: 15933221.562
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 8
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0177446s
+FLOPS: 25468771.318
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 4
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0256724s
+FLOPS: 17603888.628
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 2
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0403018s
+FLOPS: 11213736.193
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/3200.mtx
+RHS: FAKE
+GWS: 3200
+LWS: 3200
+N:   3200
+M:   3200
+DP:   10758
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0200892s
+FLOPS: 1441768.128
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 4800
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_OUT_OF_RESOURCES
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 2400
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0711394s
+FLOPS: 978079.355
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 1200
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0396697s
+FLOPS: 1829205.211
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 600
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0345333s
+FLOPS: 2374001.524
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 300
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0312563s
+FLOPS: 5887521.032
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 150
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.039842s
+FLOPS: 5529590.639
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 75
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0305772s
+FLOPS: 4980961.323
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 25
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0313318s
+FLOPS: 4861009.577
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 5
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+System appears to be unsolvable
+Time:  0.0518895s
+FLOPS: 21696829.857
+argc is 6
+Opening files...
+Available platforms:
+platform 0: Intel(R) OpenCL
+selected platform 0
+platform 1: NVIDIA CUDA
+1. Device:         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 4
+	Max Work Group Size:	8192
+Using device         Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+MTX: macierze/4800.mtx
+RHS: FAKE
+GWS: 4800
+LWS: 4800
+N:   4800
+M:   4800
+DP:   16160
+Updating shmtx
+Updating shmtx
+Updating shmtx
+Error enqueueing kernel: CL_OUT_OF_RESOURCES
