@@ -15,8 +15,8 @@ ENDIF()
 set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/SharedLibraries/boost")
 set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/SharedLibraries/boost/stage/lib")
 
-set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/SharedLibraries/CUDA/include")
-set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/SharedLibraries/CUDA/lib/x64")
+set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "/usr/include")
+set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "/usr/lib")
 
 SET(OPENCL_VENDOR "NVIDIA" CACHE STRING "Use specicic vendor SDK: NVIDIA, ATI, INTEL, IBM (default: NVIDIA)")
 FIND_PACKAGE(OpenCL REQUIRED)
@@ -24,11 +24,15 @@ INCLUDE_DIRECTORIES(${OPENCL_INCLUDE_DIR})
 
 SET(Boost_USE_STATIC_LIBS ON)
 
-FIND_PACKAGE(Boost 1.52.0 COMPONENTS log log_setup thread date_time filesystem system timer REQUIRED)
+FIND_PACKAGE(Boost 1.55.0 COMPONENTS system thread date_time filesystem timer chrono REQUIRED)
 IF (Boost_FOUND)
     INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 	LINK_DIRECTORIES ( ${Boost_LIBRARY_DIRS})
-    ADD_DEFINITIONS( "-DHAS_BOOST" )
+    ADD_DEFINITIONS( -DHAS_BOOST )
+    add_definitions(-DBOOST_THREAD_USE_LIB)
+    add_definitions(-DBOOST_DATE_TIME_NO_LIB)
+    ADD_DEFINITIONS (-DBOOST_CHRONO_INLINED )
+    ADD_DEFINITIONS (-DBOOST_CHRONO_HEADER_ONLY )
 	
 	message(STATUS ${Boost_SYSTEM_LIBRARY})
 	message(STATUS ${Boost_LIBRARIES})
@@ -66,4 +70,8 @@ enable_testing()
 
 add_executable(mtx_loader src/tests/mtx_loader.cpp)
 
-target_link_libraries(mtx_loader ${OPENCL_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(mtx_loader ${OPENCL_LIBRARIES} ${Boost_LIBRARIES} rt)
+
+# kernele - wreszcie bedzie spokoj
+
+configure_file(src/twokernels.cl ${CMAKE_CURRENT_BINARY_DIR}/twokernels.cl)

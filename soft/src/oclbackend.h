@@ -91,6 +91,11 @@ namespace PJWFront
                                         size_t p_size;
 					clGetDeviceInfo(devices[j],CL_DEVICE_MAX_WORK_GROUP_SIZE,sizeof(size_t),&p_size,NULL);
 				       printf("\tMax Work Group Size:\t%d\n",p_size);
+				   
+				   cl_uint jc;
+				       
+				   clGetDeviceInfo(devices[j],CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS,sizeof(cl_uint),&jc,NULL);
+				   printf("\tMax WI Dimensions:\t%d\n",jc);
                                 
 
 				}

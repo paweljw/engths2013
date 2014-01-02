@@ -71,12 +71,17 @@ namespace PJWFront
 				return _slices;
 			}
 
+			uint which_slice(uint x)
+			{
+				return (int)x / slice_height;
+			}
+
 			void set(uint x, uint y, ScalarType val)
 			{
 				if(m(x, y) != val)
 					m(x, y) = val;
 
-				uint slice = (int)x / slice_height;
+				uint slice = which_slice(x);
 
 				slice_left[slice] = y < slice_left[slice] ? y : slice_left[slice];
 				slice_right[slice] = slice_right[slice] < y ? y : slice_right[slice];

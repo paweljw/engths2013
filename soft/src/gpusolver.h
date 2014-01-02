@@ -115,6 +115,8 @@ namespace PJWFront
 
 			// Tu te¿ nie
 			GWS = _GWS;
+			
+			fmad = (unsigned long)0;
 
 			// Na slice przypada tyle bloków
 			BLOCK_NUM = GWS/LWS;
@@ -314,7 +316,7 @@ namespace PJWFront
 						}
 						
 					}
-					cout << ".";
+					cout << "." << endl;
 				} 
 
 				cout << "*";
@@ -347,8 +349,8 @@ namespace PJWFront
 						}
 					//cout << endl;
 					}
-				cout << endl;
-				// cout << "CPU ops " << cpu_ops << endl;
+// 				cout << endl;
+				cout << cpu_ops << endl;
 				// gpu_matrix.printMatrix();
 			} while(cpu_ops > 0);
 #pragma omp barrier			
@@ -395,9 +397,11 @@ namespace PJWFront
 				// Seed the solution with RHS data
 				solution[function] = gpu_rhs.get(fnIdx);
 				
+				uint begat = gpu_matrix.slice_rightmost(gpu_matrix.which_slice(fnIdx));
+				
 				// Since we're at x_i, terms x_i+1,...,x_n need to be applied
 				#pragma omp parallel for
-				for(int column = N-1; column > function; column--)
+				for(int column = begat; column > function; column--)
 				{
 					ScalarType multiplier = gpu_matrix.get(fnIdx, column); 	// In ax_i,j - this is the a term
 					ScalarType times = solution[column];								// x_c = ...
