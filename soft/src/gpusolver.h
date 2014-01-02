@@ -7,9 +7,49 @@
 #include "oclvector.h"
 
 #include <boost/timer/timer.hpp>
+#include <boost/numeric/ublas/matrix_sparse.hpp>
+#include <boost/numeric/ublas/io.hpp>
 
 namespace PJWFront
 {
+
+	class comp_nonzero_def : public boost::numeric::ublas::compressed_matrix<int>
+	{
+    int def;
+	public:
+		comp_nonzero_def() { }
+		comp_nonzero_def( int s1, int s2 )
+			: boost::numeric::ublas::compressed_matrix<int>(s1,s2) , def(-1)
+    {
+
+    }
+    void setDefault( int d ) { def = d; }
+    int value( int i, int j )
+    {
+		//cout << "Enter value " << i << ", " << j << endl;
+        typedef boost::numeric::ublas::compressed_matrix<int>::iterator1 it1_t;
+        typedef boost::numeric::ublas::compressed_matrix<int>::iterator2 it2_t;
+        for (it1_t it1 = begin1(); it1 != end1(); it1++)
+        {
+            if( it1.index1() <  i )
+                continue;
+            if( it1.index1() > i ) {
+                return def;
+            }
+            for (it2_t it2 = it1.begin(); it2 != it1.end(); it2++)
+            {
+                if( it2.index2() < j )
+                    continue;
+                if( it2.index2() == j )
+                    return *it2;
+                if( it2.index2() > j )
+                    return def;
+            }
+        }
+        return def;
+		}
+    };
+	
 	/// @brief Main class for the GPU version of the frontal solver
 	/// @tparam ScalarType The scalar type that will be used throughout the CPU and GPU code to store scalar values. 
 	/// Currently only float is supported as double support is widely available on NVidia chips only
@@ -26,7 +66,7 @@ namespace PJWFront
 		/// CPU-to-GPU RHS storage structure
 		util::slicing_vector<ScalarType>	gpu_rhs;
 		/// CPU-to-GPU mapping storage structure
-		std::vector<int>	cpu_map;
+		comp_nonzero_def cpu_map;
 
 		/// Size of an NxN matrix
 		uint N;
@@ -135,10 +175,13 @@ namespace PJWFront
 			// A niech tam, whatever
 			gpu_rhs = util::slicing_vector<ScalarType>(N, slice_size, backend);
 
-			//cout << "Done" << endl;
+	//		cout << "Done 2" << endl;
 
 			// To akurat ma sens, tylko trzeba bêdzie tego u¿ywaæ mocno dooko³a
-			cpu_map = std::vector<int>(N * slices);
+			cpu_map = comp_nonzero_def(slices, N);
+			cpu_map.setDefault(-1);
+
+//cout << "Done" << endl;
 
 			// To na póŸniej
 			solution = std::vector<ScalarType> (N);
@@ -293,14 +336,14 @@ namespace PJWFront
 
 						// petla 0..width
 						// #pragma omp parallel for
-#pragma omp parallel for
-						for(int i=0; i<N; i++) cpu_map.at(slice * N + i) = -1;
-#pragma omp barrier
+//#pragma omp parallel for
+						//for(int i=0; i<N; i++) cpu_map.at(slice, i) = -1;
+//#pragma omp barrier
 						for(int row = 0; row < gpu_matrix.slice_width(slice); row++)
 						{
 							// globalny indeks standardowy = slice * N + wiersz
 							// globalny indeks wymaga dodatkowej korekty o pominiete funkcje, ergo
-							uint global_ix = slice * N + row + gpu_matrix.slice_leftmost(slice);
+							uint global_ix = row + gpu_matrix.slice_leftmost(slice);
 
 							for(uint block=0; block<BLOCK_NUM; block++)
 							{
@@ -309,7 +352,7 @@ namespace PJWFront
 								if(map_slicer.get(local_ix) != -1) 
 								{
 									// dla mapy globalnej powinien byc to juz wlasciwy row
-									cpu_map.at(global_ix) = map_slicer.get(local_ix) + height_compensation;
+									cpu_map(slice, global_ix) = map_slicer.get(local_ix) + height_compensation;
 									block=BLOCK_NUM;
 								}
 							}
@@ -319,7 +362,7 @@ namespace PJWFront
 					cout << "." << endl;
 				} 
 
-				cout << "*";
+				cout << "*" << endl;
 				#pragma omp barrier
 				#pragma omp parallel for
 				for(int row = 0; row < N; row++) // petla po wierszach 0..N
@@ -329,16 +372,18 @@ namespace PJWFront
 
 						for(uint block=0; block<slices; block++) // petla po slice'ach dla wiersza
 						{
-						//	cout << cpu_map.at(block*N+row) << " ";
-							if(cpu_map.at(block*N+row) != -1)
+						//	cout << cpu_map.value(block, row) << " " << endl;
+							if(cpu_map.value(block, row) != -1)
 							{ 
+							//	cout << "Enter loop" << endl;
 								// te koordynaty juz sa globalne
 								if(first == -1){
-									first = cpu_map.at(block*N+row);
+							//		cout << "Went here" << endl;
+									first = cpu_map.value(block, row);
 									function = row;
 									continue;
 								} else {
-									int thisRow = cpu_map.at(block*N+row);
+									int thisRow = cpu_map.value(block, row);
 									#pragma omp critical
 									{
 										ReduceRows(thisRow, first, function);
@@ -370,8 +415,8 @@ namespace PJWFront
 
 			for(uint row=0; row<N; row++)
 				for(uint block=0; block<slices; block++)
-					if(cpu_map.at(block * N + row) != -1) 
-						synchronized_map[row] = cpu_map.at(block * N + row),
+					if(cpu_map.value(block, row) != -1) 
+						synchronized_map[row] = cpu_map.value(block, row),
 						block=slices;
 
 			#pragma endregion
