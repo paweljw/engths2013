@@ -1,0 +1,924 @@
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+platform 1: Intel(R) OpenCL
+selected platform 1
+1. Device: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 24
+	Max Work Group Size:	8192
+	Max WI Dimensions:	3
+Using device Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+BN: 1, GWS: 1024, LWS: 1024
+MTX: ../mtx/diag_10000x10000_0.1.mm
+RHS: FAKE
+GWS: 1024
+LWS: 1024
+N:   9999
+M:   9999
+DP:   9999
+Passing control to solver
+>>>>>>>>>>*
+Time in kernels: 0.027956569 s
+0
+Time in kernels: 0.027956569 s
+Assembling solution
+Sync done
+9900
+9800
+9700
+9600
+9500
+9400
+9300
+9200
+9100
+9000
+8900
+8800
+8700
+8600
+8500
+8400
+8300
+8200
+8100
+8000
+7900
+7800
+7700
+7600
+7500
+7400
+7300
+7200
+7100
+7000
+6900
+6800
+6700
+6600
+6500
+6400
+6300
+6200
+6100
+6000
+5900
+5800
+5700
+5600
+5500
+5400
+5300
+5200
+5100
+5000
+4900
+4800
+4700
+4600
+4500
+4400
+4300
+4200
+4100
+4000
+3900
+3800
+3700
+3600
+3500
+3400
+3300
+3200
+3100
+3000
+2900
+2800
+2700
+2600
+2500
+2400
+2300
+2200
+2100
+2000
+1900
+1800
+1700
+1600
+1500
+1400
+1300
+1200
+1100
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+
+Solution took 371.650000 s CPU, 19.388696 s real
+Time in kernels: 0.02796 s
+FLOPS: 25642445609.116
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+platform 1: Intel(R) OpenCL
+selected platform 1
+1. Device: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 24
+	Max Work Group Size:	8192
+	Max WI Dimensions:	3
+Using device Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+BN: 1, GWS: 512, LWS: 512
+MTX: ../mtx/diag_10000x10000_0.1.mm
+RHS: FAKE
+GWS: 512
+LWS: 512
+N:   9999
+M:   9999
+DP:   9999
+Passing control to solver
+>>>>>>>>>>>>>>>>>>>>*
+Time in kernels: 0.017878390 s
+0
+Time in kernels: 0.017878390 s
+Assembling solution
+Sync done
+9900
+9800
+9700
+9600
+9500
+9400
+9300
+9200
+9100
+9000
+8900
+8800
+8700
+8600
+8500
+8400
+8300
+8200
+8100
+8000
+7900
+7800
+7700
+7600
+7500
+7400
+7300
+7200
+7100
+7000
+6900
+6800
+6700
+6600
+6500
+6400
+6300
+6200
+6100
+6000
+5900
+5800
+5700
+5600
+5500
+5400
+5300
+5200
+5100
+5000
+4900
+4800
+4700
+4600
+4500
+4400
+4300
+4200
+4100
+4000
+3900
+3800
+3700
+3600
+3500
+3400
+3300
+3200
+3100
+3000
+2900
+2800
+2700
+2600
+2500
+2400
+2300
+2200
+2100
+2000
+1900
+1800
+1700
+1600
+1500
+1400
+1300
+1200
+1100
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+
+Solution took 3604.810000 s CPU, 159.571345 s real
+Time in kernels: 0.01788 s
+FLOPS: 85960219907.945
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+platform 1: Intel(R) OpenCL
+selected platform 1
+1. Device: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 24
+	Max Work Group Size:	8192
+	Max WI Dimensions:	3
+Using device Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+BN: 1, GWS: 256, LWS: 256
+MTX: ../mtx/diag_10000x10000_0.1.mm
+RHS: FAKE
+GWS: 256
+LWS: 256
+N:   9999
+M:   9999
+DP:   9999
+Passing control to solver
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*
+Time in kernels: 0.013113108 s
+0
+Time in kernels: 0.013113108 s
+Assembling solution
+Sync done
+9900
+9800
+9700
+9600
+9500
+9400
+9300
+9200
+9100
+9000
+8900
+8800
+8700
+8600
+8500
+8400
+8300
+8200
+8100
+8000
+7900
+7800
+7700
+7600
+7500
+7400
+7300
+7200
+7100
+7000
+6900
+6800
+6700
+6600
+6500
+6400
+6300
+6200
+6100
+6000
+5900
+5800
+5700
+5600
+5500
+5400
+5300
+5200
+5100
+5000
+4900
+4800
+4700
+4600
+4500
+4400
+4300
+4200
+4100
+4000
+3900
+3800
+3700
+3600
+3500
+3400
+3300
+3200
+3100
+3000
+2900
+2800
+2700
+2600
+2500
+2400
+2300
+2200
+2100
+2000
+1900
+1800
+1700
+1600
+1500
+1400
+1300
+1200
+1100
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+
+Solution took 513.870000 s CPU, 24.278403 s real
+Time in kernels: 0.01311 s
+FLOPS: 184686088454.392
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+platform 1: Intel(R) OpenCL
+selected platform 1
+1. Device: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 24
+	Max Work Group Size:	8192
+	Max WI Dimensions:	3
+Using device Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+BN: 1, GWS: 128, LWS: 128
+MTX: ../mtx/diag_10000x10000_0.1.mm
+RHS: FAKE
+GWS: 128
+LWS: 128
+N:   9999
+M:   9999
+DP:   9999
+Passing control to solver
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*
+Time in kernels: 0.012439787 s
+0
+Time in kernels: 0.012439787 s
+Assembling solution
+Sync done
+9900
+9800
+9700
+9600
+9500
+9400
+9300
+9200
+9100
+9000
+8900
+8800
+8700
+8600
+8500
+8400
+8300
+8200
+8100
+8000
+7900
+7800
+7700
+7600
+7500
+7400
+7300
+7200
+7100
+7000
+6900
+6800
+6700
+6600
+6500
+6400
+6300
+6200
+6100
+6000
+5900
+5800
+5700
+5600
+5500
+5400
+5300
+5200
+5100
+5000
+4900
+4800
+4700
+4600
+4500
+4400
+4300
+4200
+4100
+4000
+3900
+3800
+3700
+3600
+3500
+3400
+3300
+3200
+3100
+3000
+2900
+2800
+2700
+2600
+2500
+2400
+2300
+2200
+2100
+2000
+1900
+1800
+1700
+1600
+1500
+1400
+1300
+1200
+1100
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+
+Solution took 723.030000 s CPU, 33.381745 s real
+Time in kernels: 0.01244 s
+FLOPS: 450865094715.850
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+platform 1: Intel(R) OpenCL
+selected platform 1
+1. Device: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 24
+	Max Work Group Size:	8192
+	Max WI Dimensions:	3
+Using device Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+BN: 1, GWS: 64, LWS: 64
+MTX: ../mtx/diag_10000x10000_0.1.mm
+RHS: FAKE
+GWS: 64
+LWS: 64
+N:   9999
+M:   9999
+DP:   9999
+Passing control to solver
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*
+Time in kernels: 0.013066212 s
+0
+Time in kernels: 0.013066212 s
+Assembling solution
+Sync done
+9900
+9800
+9700
+9600
+9500
+9400
+9300
+9200
+9100
+9000
+8900
+8800
+8700
+8600
+8500
+8400
+8300
+8200
+8100
+8000
+7900
+7800
+7700
+7600
+7500
+7400
+7300
+7200
+7100
+7000
+6900
+6800
+6700
+6600
+6500
+6400
+6300
+6200
+6100
+6000
+5900
+5800
+5700
+5600
+5500
+5400
+5300
+5200
+5100
+5000
+4900
+4800
+4700
+4600
+4500
+4400
+4300
+4200
+4100
+4000
+3900
+3800
+3700
+3600
+3500
+3400
+3300
+3200
+3100
+3000
+2900
+2800
+2700
+2600
+2500
+2400
+2300
+2200
+2100
+2000
+1900
+1800
+1700
+1600
+1500
+1400
+1300
+1200
+1100
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+
+Solution took 4673.560000 s CPU, 206.016151 s real
+Time in kernels: 0.01307 s
+FLOPS: 1043195201792.226
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+platform 1: Intel(R) OpenCL
+selected platform 1
+1. Device: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 24
+	Max Work Group Size:	8192
+	Max WI Dimensions:	3
+Using device Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+BN: 1, GWS: 32, LWS: 32
+MTX: ../mtx/diag_10000x10000_0.1.mm
+RHS: FAKE
+GWS: 32
+LWS: 32
+N:   9999
+M:   9999
+DP:   9999
+Passing control to solver
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*
+Time in kernels: 0.019240464 s
+0
+Time in kernels: 0.019240464 s
+Assembling solution
+Sync done
+9900
+9800
+9700
+9600
+9500
+9400
+9300
+9200
+9100
+9000
+8900
+8800
+8700
+8600
+8500
+8400
+8300
+8200
+8100
+8000
+7900
+7800
+7700
+7600
+7500
+7400
+7300
+7200
+7100
+7000
+6900
+6800
+6700
+6600
+6500
+6400
+6300
+6200
+6100
+6000
+5900
+5800
+5700
+5600
+5500
+5400
+5300
+5200
+5100
+5000
+4900
+4800
+4700
+4600
+4500
+4400
+4300
+4200
+4100
+4000
+3900
+3800
+3700
+3600
+3500
+3400
+3300
+3200
+3100
+3000
+2900
+2800
+2700
+2600
+2500
+2400
+2300
+2200
+2100
+2000
+1900
+1800
+1700
+1600
+1500
+1400
+1300
+1200
+1100
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+
+Solution took 514.460000 s CPU, 26.729176 s real
+Time in kernels: 0.01924 s
+FLOPS: 1308073007802.722
+Opening files...
+Available platforms:
+platform 0: NVIDIA CUDA
+platform 1: Intel(R) OpenCL
+selected platform 1
+1. Device: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+ 1.1 Hardware version: OpenCL 1.2 (Build 76921)
+ 1.2 Software version: 1.2.0.76921
+ 1.3 OpenCL C version: OpenCL C 1.2 
+ 1.4 Parallel compute units: 24
+	Max Work Group Size:	8192
+	Max WI Dimensions:	3
+Using device Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+BN: 1, GWS: 16, LWS: 16
+MTX: ../mtx/diag_10000x10000_0.1.mm
+RHS: FAKE
+GWS: 16
+LWS: 16
+N:   9999
+M:   9999
+DP:   9999
+Passing control to solver
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*
+Time in kernels: 0.030754064 s
+0
+Time in kernels: 0.030754064 s
+Assembling solution
+Sync done
+9900
+9800
+9700
+9600
+9500
+9400
+9300
+9200
+9100
+9000
+8900
+8800
+8700
+8600
+8500
+8400
+8300
+8200
+8100
+8000
+7900
+7800
+7700
+7600
+7500
+7400
+7300
+7200
+7100
+7000
+6900
+6800
+6700
+6600
+6500
+6400
+6300
+6200
+6100
+6000
+5900
+5800
+5700
+5600
+5500
+5400
+5300
+5200
+5100
+5000
+4900
+4800
+4700
+4600
+4500
+4400
+4300
+4200
+4100
+4000
+3900
+3800
+3700
+3600
+3500
+3400
+3300
+3200
+3100
+3000
+2900
+2800
+2700
+2600
+2500
+2400
+2300
+2200
+2100
+2000
+1900
+1800
+1700
+1600
+1500
+1400
+1300
+1200
+1100
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+
+Solution took 1467.720000 s CPU, 75.695793 s real
+Time in kernels: 0.03075 s
+FLOPS: 1378955749067.831
