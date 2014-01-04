@@ -1,0 +1,8 @@
+512 80
+1024 90
+2048 110 (@10k, @80k)
+4096 206
+8192 596
+
+Intel duża różnica GWS od LWS - niższe obciążenie rdzeni niż OMP
+Pojedynczy dobrze obciążony rdzeń, reszta coś tam cyka
