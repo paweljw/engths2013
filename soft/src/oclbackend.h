@@ -34,10 +34,73 @@ namespace PJWFront
 			
 			/// OpenCL device placeholder
 			cl_device_id device;
+			cl_device_id* devices;
+			cl_uint deviceCount;			
 
 			/// This OpenCL backend will only hold a single program
 			cl_program program;
 
+			void enumerateDevices()
+			{
+				int j;
+				char* value;
+				size_t valueSize;
+				
+				cl_uint maxComputeUnits;
+	
+				clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, 0, NULL, &deviceCount);
+				devices = (cl_device_id*) malloc(sizeof(cl_device_id) * deviceCount);
+				clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, deviceCount, devices, NULL);
+
+				// for each device print critical attributes
+				for (j = 0; j < deviceCount; j++) {
+
+					// print device name
+					clGetDeviceInfo(devices[j], CL_DEVICE_NAME, 0, NULL, &valueSize);
+					value = (char*) malloc(valueSize);
+					clGetDeviceInfo(devices[j], CL_DEVICE_NAME, valueSize, value, NULL);
+					printf("%d. Device: %s\n", j+1, value);
+					free(value);
+
+					// print hardware device version
+					clGetDeviceInfo(devices[j], CL_DEVICE_VERSION, 0, NULL, &valueSize);
+					value = (char*) malloc(valueSize);
+					clGetDeviceInfo(devices[j], CL_DEVICE_VERSION, valueSize, value, NULL);
+					printf(" %d.%d Hardware version: %s\n", j+1, 1, value);
+					free(value);
+
+					// print software driver version
+					clGetDeviceInfo(devices[j], CL_DRIVER_VERSION, 0, NULL, &valueSize);
+					value = (char*) malloc(valueSize);
+					clGetDeviceInfo(devices[j], CL_DRIVER_VERSION, valueSize, value, NULL);
+					printf(" %d.%d Software version: %s\n", j+1, 2, value);
+					free(value);
+
+					// print c version supported by compiler for device
+					clGetDeviceInfo(devices[j], CL_DEVICE_OPENCL_C_VERSION, 0, NULL, &valueSize);
+					value = (char*) malloc(valueSize);
+					clGetDeviceInfo(devices[j], CL_DEVICE_OPENCL_C_VERSION, valueSize, value, NULL);
+					printf(" %d.%d OpenCL C version: %s\n", j+1, 3, value);
+					free(value);
+
+					// print parallel compute units
+					clGetDeviceInfo(devices[j], CL_DEVICE_MAX_COMPUTE_UNITS,
+							sizeof(maxComputeUnits), &maxComputeUnits, NULL);
+					printf(" %d.%d Parallel compute units: %d\n", j+1, 4, maxComputeUnits);
+
+                                        size_t p_size;
+					clGetDeviceInfo(devices[j],CL_DEVICE_MAX_WORK_GROUP_SIZE,sizeof(size_t),&p_size,NULL);
+				       printf("\tMax Work Group Size:\t%d\n",p_size);
+				   
+				   cl_uint jc;
+				       
+				   clGetDeviceInfo(devices[j],CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS,sizeof(cl_uint),&jc,NULL);
+				   printf("\tMax WI Dimensions:\t%d\n",jc);
+                                
+
+				}
+			}
+			
 			/// A helper function to get and select an OpenCL platform
 			cl_int oclGetPlatformID(cl_platform_id* clSelectedPlatformID)
 			{
@@ -195,6 +258,7 @@ namespace PJWFront
 				OCLBackend("NVIDIA");
 			}
 		
+		
 			/// The default constructor, which will setup the required OpenCL structs
 			/// A platform and device will be selected, a context and command queue will be created
 			OCLBackend(string _implementation)
@@ -216,6 +280,20 @@ namespace PJWFront
 					cout << "Error getting device ids: " << oclErrorString(error) << endl;
 				   exit(error);
 				}
+
+				enumerateDevices();
+				
+				// device = devices[device_id];
+				
+				// Read what the device is
+				size_t valueSize;
+				char* value;
+				
+				clGetDeviceInfo(device, CL_DEVICE_NAME, 0, NULL, &valueSize);
+				value = (char*)malloc(valueSize);
+				clGetDeviceInfo(device, CL_DEVICE_NAME, valueSize, value, NULL);
+				
+				cout << "Using device " << value << endl;
 
 				// Context setup
 				context = clCreateContext(0, 1, &device, NULL, NULL, &error);
@@ -354,6 +432,17 @@ namespace PJWFront
 				}
 			}
 			
+			template <typename T>
+			void arg_local(cl_kernel kernel, unsigned int arg, uint size_of_memory)
+			{
+				cl_int error = clSetKernelArg(kernel, arg, sizeof(T) * size_of_memory, NULL);
+				if(error != CL_SUCCESS)
+				{
+					cout << "Error setting arg " << arg << ": " << oclErrorString(error) << endl;
+					exit(error);
+				}
+			}
+
 			/// Set a generic kernel argument for a particular kernel
 			/// @param kernel Kernel handle object
 			/// @param arg Which kernel argument to set (by number)
@@ -480,4 +569,3 @@ namespace PJWFront
 		};
 	}
 }
-

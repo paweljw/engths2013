@@ -1,0 +1,7 @@
+U¿yte macierze:
+
+512: http://www.cise.ufl.edu/research/sparse/matrices/Bai/dw256A.html
+1000: http://www.cise.ufl.edu/research/sparse/matrices/Bai/tub1000.html // i sherman
+2048: http://www.cise.ufl.edu/research/sparse/matrices/Bai/dw1024.html
+3200: http://www.cise.ufl.edu/research/sparse/matrices/Bai/mhd3200b.html
+4800: http://www.cise.ufl.edu/research/sparse/matrices/Bai/mhd4800b.html

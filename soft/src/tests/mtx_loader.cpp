@@ -1,10 +1,12 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sstream>
 
-//#define __SOLVERDEBUG
+#define __SOLVERDEBUG
 //#define __SOLVERTIMING
 #define __SOLVERTIMING_SILENT
+#define __SOLVER_DOT
 
 #include "gpusolver.h"
 
@@ -12,6 +14,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+	// cout << "argc is " << argc << endl;
 	string mtx_main = argv[1];
 	string mtx_rhs = argv[2];
 
@@ -19,7 +22,9 @@ int main(int argc, char* argv[])
 	unsigned int _GWS = 0;
 	
 	string impl;
-	
+
+bool fakeRHS = false;	
+
 	if(argc > 3)
 	{
 		string sLWS = argv[3];
@@ -36,7 +41,9 @@ int main(int argc, char* argv[])
 	{
 		impl = argv[5];
 	}
-	
+
+	cout << "Opening files..." << endl;	
+
 	fstream main;
 	main.open(mtx_main.c_str(), std::fstream::in);
 
@@ -46,13 +53,19 @@ int main(int argc, char* argv[])
 		exit(1);
 	}
 
-	fstream rhs;
-	rhs.open(mtx_rhs.c_str(), fstream::in);
+	if(mtx_rhs == "FAKE") fakeRHS = true;
 
-	if(!rhs.is_open())
+	fstream rhs;
+
+	if(!fakeRHS)
 	{
-		cout << "Can't open " << mtx_rhs << endl;
-		exit(2);
+		rhs.open(mtx_rhs.c_str(), fstream::in);
+
+		if(!rhs.is_open())
+		{
+			cout << "Can't open " << mtx_rhs << endl;
+			exit(2);
+		}
 	}
 
 	string line;
@@ -98,23 +111,30 @@ int main(int argc, char* argv[])
 
 	checked_size = false;
 
-	int counter = 0;
-	while(getline(rhs, line))
+	if(!fakeRHS)
 	{
-		if(line[0] != '%')
+		int counter = 0;
+		while(getline(rhs, line))
 		{
-			if(!checked_size) checked_size = true;
-			else {
-			istringstream iss(line);
-			float val;
-			iss >> val;
+			if(line[0] != '%')
+			{
+				if(!checked_size) checked_size = true;
+				else {
+				istringstream iss(line);
+				float val;
+				iss >> val;
 
-			gpuf.setRHS(counter, val);
-			// cout << counter << endl;
-			counter++;
+				gpuf.setRHS(counter, val);
+				// cout << counter << endl;
+				counter++;
+				}
 			}
 		}
+	} else {
+		for(int i=0; i<N;i++) gpuf.setRHS(i, 1);
 	}
+
+	cout << "Passing control to solver" << endl;
 
 	try
 	{
@@ -124,13 +144,13 @@ int main(int argc, char* argv[])
 		return 0;
 	} catch(PJWFront::UnsolvableException) {
 		cout << "System appears to be unsolvable" << endl;
-		return 0;
+		//return 0;
 	} catch(PJWFront::NanException) {
 		cout << "The NaN error appeared" << endl;
 		return 0;
 	}
 
-	cout << "Time:  " << gpuf.ocltime << "s" << endl;
+	printf("\nTime in kernels: %0.5f s\n", gpuf.ocltime);
 	printf("FLOPS: %0.3f\n", gpuf.fmads);
 
 

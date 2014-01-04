@@ -44,6 +44,7 @@ namespace PJWFront
 			/// Internal function to regenerate the flat matrix and offset tables
 			void Update()
 			{
+				std::cout << "Updating shmtx" << std::endl;
 				if(!NeedsUpdate) return;
 
 				#pragma region Size requirements analysis
@@ -87,12 +88,10 @@ namespace PJWFront
 				NeedsUpdate = false;
 			}
 			
-			
-			
 		public:
 			/// This matrix is sometimes required to be accessible from outside
 			/// @todo Code a more clean, OOP solution to this (getters/setters instead of blatant misuse of public visibility)
-			ScalarType** classic_matrix;
+			std::vector< std::map< unsigned int, ScalarType> > classic_matrix;
 			
 			/// Simple constructor that allocates enough space for the classic square matrix and zeros it out.
 			/// Also sets up relevant storages.
@@ -101,14 +100,8 @@ namespace PJWFront
 			short_matrix(uint N, ocl::OCLBackend* b)
 			{
 				size = N;
-				classic_matrix = new ScalarType*[N];
+				classic_matrix = std::vector< std::map< unsigned int, ScalarType> >(N*N);
 				
-				for(uint i=0; i<N; i++)
-				{
-					classic_matrix[i] = new ScalarType[N];
-					for(uint j=0; j<N; j++)
-						classic_matrix[i][j] = 0;
-				}
 				DataPoints = 0;
 				NeedsUpdate = true;
 

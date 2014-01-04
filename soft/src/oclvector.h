@@ -24,6 +24,8 @@ namespace util
 		/// A pointer to custom backend type (this facilitates the transfers)
 		ocl::OCLBackend* backend;
 
+		cl_mem cache;
+
 		/// Size of the data
 		uint size;
 		
@@ -68,6 +70,17 @@ namespace util
 			v.at(p) = val;
 		}
 
+		void add(uint p, ScalarType val)
+		{
+			val += get(p);
+			put(p, val);
+		}
+
+		ScalarType get(uint p)
+		{
+			return v.at(p); 
+		}
+
 		/// Stores zeroes throughout the vector
 		void zerofill()
 		{
@@ -75,14 +88,27 @@ namespace util
 				v.at(i) = (ScalarType)0.0f;
 		}
 
+		void fill(ScalarType value)
+		{
+				for(uint i=0; i<v.size(); i++)
+				v.at(i) = (ScalarType)value;
+		}
+
 		/// Allows to extract the OCL data handle
 		/// @remark Note that every time this is used, a new handle will be created and the data sent again
-		cl_mem ocl_handle()
+		cl_mem ocl_handle(bool _cache = false)
 		{
+			if(_cache) return cache;
 			for(unsigned int i=0; i<size; i++)
 				temp[i] = v.at(i);
 				
-			return backend->sendData(temp, size*sizeof(ScalarType));
+			cache = backend->sendData(temp, size*sizeof(ScalarType));
+			return cache;
+		}
+
+		void pull_data_from_cache()
+		{
+			pull_data(cache);
 		}
 		
 		/// Allows to fill the vector again after operations have been done on the GPU.
@@ -102,6 +128,12 @@ namespace util
 				cout << v.at(i) << " ";
 			}
 			cout << endl;
+		}
+
+		~ocl_vector()
+		{
+			std::vector<ScalarType>().swap(v);
+		//	backend->releaseData(cache);
 		}
 	};
 }
