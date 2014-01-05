@@ -1,0 +1,33 @@
+#include <iostream>
+#include <ctime>
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+int main(int argc, char* argv[])
+{
+	int max;
+	
+	string mx = argv[1];
+	
+	istringstream ismx(mx);
+	
+	ismx >> max;
+	
+	srand(time(NULL));
+	
+	cout << "%%MatrixMarket matrix coordinate real symmetric" << endl;
+	
+	for(int i=1; i<max; i++)
+	{
+		float r = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+		cout << i << " " << i << "\t" << r << endl;
+	}
+	
+	return 0;
+}
+	
+
+	
+
