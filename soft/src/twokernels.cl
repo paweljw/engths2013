@@ -102,7 +102,7 @@ __kernel void Slicer(
 	int blockID = get_group_id(0);
 	int param_block_size = get_local_size(0);
 	
-	unsigned int lflops;
+	unsigned int lflops = 0;
 	
 	if(0 == threadID) 
 	{

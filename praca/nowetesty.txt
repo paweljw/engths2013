@@ -1,0 +1,2 @@
+tesla 256 gws 4096
+intel 128 gws (128 * 6) 768 albo x12 = 1536
