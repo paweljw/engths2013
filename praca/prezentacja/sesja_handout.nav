@@ -1,0 +1,86 @@
+\beamer@endinputifotherversion {3.24pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\sectionentry {1}{Solwer frontalny}{3}{Solwer frontalny}{0}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Historia i inspiracja}}\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\slideentry {1}{1}{1}{3/3}{Historia i inspiracja}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\sectionentry {2}{Cele projektu}{4}{Cele projektu}{0}}
+\headcommand {\beamer@sectionpages {3}{3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{4}{G\IeC {\l }\IeC {\'o}wne za\IeC {\l }o\IeC {\.z}enia}}\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\slideentry {2}{1}{1}{4/4}{G\IeC {\l }\IeC {\'o}wne za\IeC {\l }o\IeC {\.z}enia}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{5}{Stworzenie rozwi\IeC {\k a}zania uniwersalnego}}\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\slideentry {2}{2}{1}{5/5}{Stworzenie rozwi\IeC {\k a}zania uniwersalnego}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\sectionentry {3}{Og\IeC {\'o}lny algorytm}{6}{Og\IeC {\'o}lny algorytm}{0}}
+\headcommand {\beamer@sectionpages {4}{5}}
+\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{6}{Metoda wydzielania front\IeC {\'o}w rozwi\IeC {\k a}zania}}\headcommand {\beamer@subsectionpages {6}{5}}
+\headcommand {\slideentry {3}{1}{1}{6/6}{Metoda wydzielania front\IeC {\'o}w rozwi\IeC {\k a}zania}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{7}{R\IeC {\'o}wnoleg\IeC {\l }y wariant metody Gaussa}}\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\slideentry {3}{2}{1}{7/7}{R\IeC {\'o}wnoleg\IeC {\l }y wariant metody Gaussa}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{8}{Przyk\IeC {\l }ad}}\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\slideentry {3}{3}{1}{8/8}{Przyk\IeC {\l }ad}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {3}{3}{2}{9/9}{Przyk\IeC {\l }ad}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {3}{3}{3}{10/10}{Przyk\IeC {\l }ad}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\sectionentry {4}{Realizacja projektu}{11}{Realizacja projektu}{0}}
+\headcommand {\beamer@sectionpages {6}{10}}
+\headcommand {\beamer@subsectionpages {8}{10}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{11}{Problemy r\IeC {\'o}wnoleg\IeC {\l }o\IeC {\'s}ci masowej}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\slideentry {4}{1}{1}{11/11}{Problemy r\IeC {\'o}wnoleg\IeC {\l }o\IeC {\'s}ci masowej}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{12}{Przyk\IeC {\l }ad funkcjonowania jednego frontu}}\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\slideentry {4}{2}{1}{12/12}{Przyk\IeC {\l }ad funkcjonowania jednego frontu}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {4}{2}{2}{13/13}{Przyk\IeC {\l }ad funkcjonowania jednego frontu}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\slideentry {4}{2}{3}{14/14}{Przyk\IeC {\l }ad funkcjonowania jednego frontu}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {4}{2}{4}{15/15}{Przyk\IeC {\l }ad funkcjonowania jednego frontu}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{16}{Paradygmat czarnej skrzynki}}\headcommand {\beamer@subsectionpages {12}{15}}
+\headcommand {\slideentry {4}{3}{1}{16/16}{Paradygmat czarnej skrzynki}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\sectionentry {5}{Badania wydajno\IeC {\'s}ci}{17}{Badania wydajno\IeC {\'s}ci}{0}}
+\headcommand {\beamer@sectionpages {11}{16}}
+\headcommand {\beamer@subsectionpages {16}{16}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{17}{Optymalna liczba w\IeC {\k a}tk\IeC {\'o}w dla badanych urz\IeC {\k a}dze\IeC {\'n}}}\headcommand {\beamer@subsectionpages {17}{16}}
+\headcommand {\slideentry {5}{1}{1}{17/17}{Optymalna liczba w\IeC {\k a}tk\IeC {\'o}w dla badanych urz\IeC {\k a}dze\IeC {\'n}}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {5}{1}{2}{18/18}{Optymalna liczba w\IeC {\k a}tk\IeC {\'o}w dla badanych urz\IeC {\k a}dze\IeC {\'n}}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{19}{Przyspieszenie w zale\IeC {\.z}no\IeC {\'s}ci od globalnej ilo\IeC {\'s}ci w\IeC {\k a}tk\IeC {\'o}w}}\headcommand {\beamer@subsectionpages {17}{18}}
+\headcommand {\slideentry {5}{2}{1}{19/19}{Przyspieszenie w zale\IeC {\.z}no\IeC {\'s}ci od globalnej ilo\IeC {\'s}ci w\IeC {\k a}tk\IeC {\'o}w}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {5}{2}{2}{20/20}{Przyspieszenie w zale\IeC {\.z}no\IeC {\'s}ci od globalnej ilo\IeC {\'s}ci w\IeC {\k a}tk\IeC {\'o}w}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{21}{Skalowalno\IeC {\'s}\IeC {\'c}}}\headcommand {\beamer@subsectionpages {19}{20}}
+\headcommand {\slideentry {5}{3}{1}{21/21}{Skalowalno\IeC {\'s}\IeC {\'c}}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {5}{3}{2}{22/22}{Skalowalno\IeC {\'s}\IeC {\'c}}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\sectionentry {6}{Podsumowanie projektu}{23}{Podsumowanie projektu}{0}}
+\headcommand {\beamer@sectionpages {17}{22}}
+\headcommand {\beamer@subsectionpages {21}{22}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{23}{Wykonana praca}}\headcommand {\beamer@subsectionpages {23}{22}}
+\headcommand {\slideentry {6}{1}{1}{23/23}{Wykonana praca}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{24}{Kontynuacja projektu}}\headcommand {\beamer@subsectionpages {23}{23}}
+\headcommand {\slideentry {6}{2}{1}{24/24}{Kontynuacja projektu}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@partpages {1}{24}}
+\headcommand {\beamer@subsectionpages {24}{24}}
+\headcommand {\beamer@sectionpages {23}{24}}
+\headcommand {\beamer@documentpages {24}}
+\headcommand {\def \inserttotalframenumber {24}}

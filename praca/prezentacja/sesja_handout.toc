@@ -1,0 +1,21 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Solwer frontalny}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Historia i inspiracja}{3}{0}{1}
+\beamer@sectionintoc {2}{Cele projektu}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{G\IeC {\l }\IeC {\'o}wne za\IeC {\l }o\IeC {\.z}enia}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Stworzenie rozwi\IeC {\k a}zania uniwersalnego}{5}{0}{2}
+\beamer@sectionintoc {3}{Og\IeC {\'o}lny algorytm}{6}{0}{3}
+\beamer@subsectionintoc {3}{1}{Metoda wydzielania front\IeC {\'o}w rozwi\IeC {\k a}zania}{6}{0}{3}
+\beamer@subsectionintoc {3}{2}{R\IeC {\'o}wnoleg\IeC {\l }y wariant metody Gaussa}{7}{0}{3}
+\beamer@subsectionintoc {3}{3}{Przyk\IeC {\l }ad}{8}{0}{3}
+\beamer@sectionintoc {4}{Realizacja projektu}{11}{0}{4}
+\beamer@subsectionintoc {4}{1}{Problemy r\IeC {\'o}wnoleg\IeC {\l }o\IeC {\'s}ci masowej}{11}{0}{4}
+\beamer@subsectionintoc {4}{2}{Przyk\IeC {\l }ad funkcjonowania jednego frontu}{12}{0}{4}
+\beamer@subsectionintoc {4}{3}{Paradygmat czarnej skrzynki}{16}{0}{4}
+\beamer@sectionintoc {5}{Badania wydajno\IeC {\'s}ci}{17}{0}{5}
+\beamer@subsectionintoc {5}{1}{Optymalna liczba w\IeC {\k a}tk\IeC {\'o}w dla badanych urz\IeC {\k a}dze\IeC {\'n}}{17}{0}{5}
+\beamer@subsectionintoc {5}{2}{Przyspieszenie w zale\IeC {\.z}no\IeC {\'s}ci od globalnej ilo\IeC {\'s}ci w\IeC {\k a}tk\IeC {\'o}w}{19}{0}{5}
+\beamer@subsectionintoc {5}{3}{Skalowalno\IeC {\'s}\IeC {\'c}}{21}{0}{5}
+\beamer@sectionintoc {6}{Podsumowanie projektu}{23}{0}{6}
+\beamer@subsectionintoc {6}{1}{Wykonana praca}{23}{0}{6}
+\beamer@subsectionintoc {6}{2}{Kontynuacja projektu}{24}{0}{6}
