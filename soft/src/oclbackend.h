@@ -59,34 +59,34 @@ namespace PJWFront
 					clGetDeviceInfo(devices[j], CL_DEVICE_NAME, 0, NULL, &valueSize);
 					value = (char*) malloc(valueSize);
 					clGetDeviceInfo(devices[j], CL_DEVICE_NAME, valueSize, value, NULL);
-					printf("%d. Device: %s\n", j+1, value);
+					//printf("%d. Device: %s\n", j+1, value);
 					free(value);
 
 					// print hardware device version
 					clGetDeviceInfo(devices[j], CL_DEVICE_VERSION, 0, NULL, &valueSize);
 					value = (char*) malloc(valueSize);
 					clGetDeviceInfo(devices[j], CL_DEVICE_VERSION, valueSize, value, NULL);
-					printf(" %d.%d Hardware version: %s\n", j+1, 1, value);
+					//printf(" %d.%d Hardware version: %s\n", j+1, 1, value);
 					free(value);
 
 					// print software driver version
 					clGetDeviceInfo(devices[j], CL_DRIVER_VERSION, 0, NULL, &valueSize);
 					value = (char*) malloc(valueSize);
 					clGetDeviceInfo(devices[j], CL_DRIVER_VERSION, valueSize, value, NULL);
-					printf(" %d.%d Software version: %s\n", j+1, 2, value);
+					//printf(" %d.%d Software version: %s\n", j+1, 2, value);
 					free(value);
 
 					// print c version supported by compiler for device
 					clGetDeviceInfo(devices[j], CL_DEVICE_OPENCL_C_VERSION, 0, NULL, &valueSize);
 					value = (char*) malloc(valueSize);
 					clGetDeviceInfo(devices[j], CL_DEVICE_OPENCL_C_VERSION, valueSize, value, NULL);
-					printf(" %d.%d OpenCL C version: %s\n", j+1, 3, value);
+					//printf(" %d.%d OpenCL C version: %s\n", j+1, 3, value);
 					free(value);
 
 					// print parallel compute units
 					clGetDeviceInfo(devices[j], CL_DEVICE_MAX_COMPUTE_UNITS,
 							sizeof(maxComputeUnits), &maxComputeUnits, NULL);
-					printf(" %d.%d Parallel compute units: %d\n", j+1, 4, maxComputeUnits);
+					//printf(" %d.%d Parallel compute units: %d\n", j+1, 4, maxComputeUnits);
 
                                         size_t p_size;
 					clGetDeviceInfo(devices[j],CL_DEVICE_MAX_WORK_GROUP_SIZE,sizeof(size_t),&p_size,NULL);
@@ -95,7 +95,7 @@ namespace PJWFront
 				   cl_uint jc;
 
 				   clGetDeviceInfo(devices[j],CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS,sizeof(cl_uint),&jc,NULL);
-				   printf("\tMax WI Dimensions:\t%d\n",jc);
+				   //printf("\tMax WI Dimensions:\t%d\n",jc);
 
 
 				}
@@ -263,6 +263,8 @@ namespace PJWFront
 			/// A platform and device will be selected, a context and command queue will be created
 			OCLBackend(int pts, int dts)
 			{
+				//cout << "Going for platform " << pts << endl;
+				//cout << "Going for device " << dts << endl;
 				cl_int error;
 
 				// Platform setup
@@ -284,15 +286,16 @@ namespace PJWFront
 				device = devices[dts];
 
 				// Read what the device is
-				//size_t valueSize;
-				//char* value;
+/*
+				size_t valueSize;
+				char* value;
 
-				//clGetDeviceInfo(device, CL_DEVICE_NAME, 0, NULL, &valueSize);
-				//value = (char*)malloc(valueSize);
-				//clGetDeviceInfo(device, CL_DEVICE_NAME, valueSize, value, NULL);
+				clGetDeviceInfo(device, CL_DEVICE_NAME, 0, NULL, &valueSize);
+				value = (char*)malloc(valueSize);
+				clGetDeviceInfo(device, CL_DEVICE_NAME, valueSize, value, NULL);
 
-				//cout << "Using device " << value << endl;
-
+				cout << "Using device " << value << endl;
+*/
 				// Context setup
 				context = clCreateContext(0, 1, &device, NULL, NULL, &error);
 				if (error != CL_SUCCESS) {

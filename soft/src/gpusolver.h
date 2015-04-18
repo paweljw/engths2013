@@ -146,11 +146,17 @@ namespace PJWFront
 			// Initialize OpenCL backend
 			backend = new ocl::OCLBackend(pts, dts);
 
+			//cout << "Set up backend" << endl;
+
 			// Remember matrix size
 			N = size;
 
+			//cout << "Set size, lol" << endl;
+
 			// Remember numerical error
 			NUM_ERR = 0.0000000001;
+
+			//cout << "Set numerical error, lol" << endl;
 
 			// Nic tu nie cwaniakujemy
 			LWS = _LWS;
@@ -158,10 +164,15 @@ namespace PJWFront
 			// Tu te� nie
 			GWS = _GWS;
 
+			//cout << "Set LWS and GWS, lol" << endl;
+
 			fmad = (unsigned long)0;
 
-			// Na slice przypada tyle blok�w
+			//cout << "Set fmad, lol" << endl;
+			
 			BLOCK_NUM = GWS/LWS;
+
+			//cout << "Set block_num, lol" << endl;
 
 			cout << "BN: " << BLOCK_NUM << ", GWS: " << GWS << ", LWS: " << LWS << endl;
 
@@ -170,6 +181,8 @@ namespace PJWFront
 			// Inicjalizacja kawa�kuj�cej macierzy; slice ma mie� taki rozmiar jak GWS
 			gpu_matrix = util::slicing_matrix<ScalarType>(N, slice_size, backend);
 
+			//cout << "slicing matrix done" << endl;
+
 			slices = gpu_matrix.slices();
 
 			//cout << "Done" << endl;
@@ -177,15 +190,15 @@ namespace PJWFront
 			// A niech tam, whatever
 			gpu_rhs = util::slicing_vector<ScalarType>(N, slice_size, backend);
 
-	//		cout << "Done 2" << endl;
+			//cout << "Done 2" << endl;
 
 			// To akurat ma sens, tylko trzeba b�dzie tego u�ywa� mocno dooko�a
 			cpu_map = comp_nonzero_def(slices, N);
 			cpu_map.setDefault(-1);
 
-//cout << "Done" << endl;
+			//cout << "Done 3" << endl;
 
-			// To na p��niej
+			// To na piej
 			solution = std::vector<ScalarType> (N);
 
 			//cout << "Done" << endl;
@@ -361,10 +374,10 @@ namespace PJWFront
 						}
 
 					}
-					cout << "." << endl;
+					//cout << "." << endl;
 				}
 
-				cout << "*" << endl;
+//				cout << "*" << endl;
 				#pragma omp barrier
 				#pragma omp parallel for
 				for(int row = 0; row < N; row++) // petla po wierszach 0..N
@@ -411,7 +424,7 @@ namespace PJWFront
 
 		//	printf("Achieved FMAD/s: %0.1f\n", fmads);
 
-			cout << "Assembling solution" << endl;
+//			cout << "Assembling solution" << endl;
 			// Local storage for the synchronized (from multiple block maps) map
 			synchronized_map = new unsigned int[N];
 

@@ -19,8 +19,8 @@ int main(int argc, char* argv[])
 	string mtx_main = argv[1];
 	string mtx_rhs = argv[2];
 
-	string _platform = argv[3];
-	string _device = argv[4];
+	string _platform = argv[5];
+	string _device = argv[6];
 
 	int platform = boost::lexical_cast<int>(_platform);
 	int device = boost::lexical_cast<int>(_device);
@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 
 	string impl;
 
-bool fakeRHS = false;
+	bool fakeRHS = false;
 
 	if(argc > 3)
 	{
@@ -49,7 +49,7 @@ bool fakeRHS = false;
 		impl = argv[5];
 	}
 
-	cout << "Opening files..." << endl;
+	//cout << "Opening files..." << endl;
 
 	fstream main;
 	main.open(mtx_main.c_str(), std::fstream::in);
@@ -75,6 +75,8 @@ bool fakeRHS = false;
 		}
 	}
 
+	//cout << "Opened dem files" << endl;
+
 	string line;
 
 	bool checked_size = false;
@@ -94,14 +96,21 @@ bool fakeRHS = false;
 		}
 	}
 
+	//cout << "Initializing solver" << endl;
+
 	PJWFront::GPUFrontal<double> gpuf(N, _LWS, _GWS, platform, device);
 
+	//cout << "Initialized solver" << endl;
+
+/*
 	cout << "MTX: " << mtx_main << endl;
 	cout << "RHS: " << mtx_rhs << endl;
 	cout << "GWS: " << gpuf.GWS << endl;
 	cout << "LWS: " << gpuf.LWS << endl;
 	cout << "N:   " << N << endl << "M:   " << M << endl << "DP:   " << DP << endl;
 
+	cout << "Upycham macierz" << endl;
+*/
 	while(getline(main, line))
 	{
 		if(line[0] != '%')
@@ -117,6 +126,8 @@ bool fakeRHS = false;
 	}
 
 	checked_size = false;
+
+//	cout << "Upycham RHS" << endl;
 
 	if(!fakeRHS)
 	{
@@ -144,6 +155,7 @@ bool fakeRHS = false;
 
 	try
 	{
+//		cout << "In try" << endl;
 		gpuf.solve();
 	} catch(PJWFront::BadException) {
 		cout << "General bad exception happened" << endl;
@@ -157,7 +169,7 @@ bool fakeRHS = false;
 	}
 
 	printf("\nTIME: %0.5f s\n", gpuf.ocltime);
-	// printf("FLOPS: %0.3f\n", gpuf.fmads);
+	printf("FLOPS: %0.3f\n", gpuf.fmads);
 
 
 	return 0;
