@@ -90,7 +90,7 @@ namespace PJWFront
 
                                         size_t p_size;
 					clGetDeviceInfo(devices[j],CL_DEVICE_MAX_WORK_GROUP_SIZE,sizeof(size_t),&p_size,NULL);
-				       printf("\tMax Work Group Size:\t%d\n", (int)p_size);
+//				       printf("\tMax Work Group Size:\t%d\n", (int)p_size);
 
 				   cl_uint jc;
 
@@ -139,16 +139,16 @@ namespace PJWFront
 
 						// get platform info for each platform and trap the NVIDIA platform if found
 						ciErrNum = clGetPlatformIDs (num_platforms, clPlatformIDs, NULL);
-						printf("Available platforms:\n");
+						//printf("Available platforms:\n");
 						for(i = 0; i < num_platforms; ++i)
 						{
 							ciErrNum = clGetPlatformInfo (clPlatformIDs[i], CL_PLATFORM_NAME, 1024, &chBuffer, NULL);
 							if(ciErrNum == CL_SUCCESS)
 							{
-								printf("platform %d: %s\n", i, chBuffer);
+						//		printf("platform %d: %s\n", i, chBuffer);
 								if(i == pts)
 								{
-									printf("selected platform %d\n", i);
+						//			printf("selected platform %d\n", i);
 									*clSelectedPlatformID = clPlatformIDs[i];
 									//break;
 								}
@@ -160,7 +160,7 @@ namespace PJWFront
 						{
 							//shrLog("WARNING: NVIDIA OpenCL platform not found - defaulting to first platform!\n\n");
 							//printf("WARNING: NVIDIA OpenCL platform not found - defaulting to first platform!\n\n");
-							printf("selected platform: %d\n", 0);
+						//	printf("selected platform: %d\n", 0);
 							*clSelectedPlatformID = clPlatformIDs[0];
 						}
 

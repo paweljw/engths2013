@@ -178,16 +178,18 @@ namespace PJWFront
 				delete [] flat_slice;
 			}
 
-			void printMatrix()
+			void printMatrix(int offset = 0)
 			{
-				cout << "----------------------------------" << endl;
-				cout << "Printing an " << size << "x" << size << " matrix" << endl;
+				//cout << "----------------------------------" << endl;
+				//cout << "Printing an " << size << "x" << size << " matrix" << endl;
 				for(uint i=0; i<size; i++)
 				{
-					cout << "Row " << i << ": \t";
+					//cout << "Row " << i << ": \t";
 					for(uint j=0; j<size; j++)
-						std::cout << m(i, j) << " ";
-					std::cout << std::endl;
+					{
+						if( m(i,j) != 0.0f )
+							std::cout << offset + i << " " << j << " " << m(i, j) << endl;
+					}
 				}
 			}
 		}; // class

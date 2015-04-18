@@ -136,13 +136,18 @@ namespace PJWFront
 		/// Solution vector storage
 		std::vector<ScalarType> solution;
 
+		uint mtx_offset;
+
 		/// compat
 		GPUFrontal()
 		{
 		}
 
-		GPUFrontal(int size, uint _LWS = 192, uint _GWS = 0, int pts = 0, int dts = 0)
+		// mtx_offset is part_num times part_size
+		GPUFrontal(int size, uint _LWS = 192, uint _GWS = 0, int pts = 0, int dts = 0, uint _mtx_offset = 0)		
 		{
+			mtx_offset = _mtx_offset;
+
 			// Initialize OpenCL backend
 			backend = new ocl::OCLBackend(pts, dts);
 
@@ -174,7 +179,7 @@ namespace PJWFront
 
 			//cout << "Set block_num, lol" << endl;
 
-			cout << "BN: " << BLOCK_NUM << ", GWS: " << GWS << ", LWS: " << LWS << endl;
+			// cout << "BN: " << BLOCK_NUM << ", GWS: " << GWS << ", LWS: " << LWS << endl;
 
 			slice_size = GWS;
 
@@ -230,7 +235,7 @@ namespace PJWFront
 		/// @todo change the way that cpu_ops is synchronized between revolutions; current wastes a couble of bits every revolution
 		void solve()
 		{
-			boost::timer::auto_cpu_timer t("Solution took %t s CPU, %w s real");
+//			boost::timer::auto_cpu_timer t("Solution took %t s CPU, %w s real");
 
 			#pragma region OCL memory setup
 
@@ -267,7 +272,7 @@ namespace PJWFront
 
 				for(int slice = 0; slice < slices; slice++)
 				{
-					cout << ">";
+					// cout << ">";
 
 					if(last_slice != slice)
 					{
@@ -410,7 +415,7 @@ namespace PJWFront
 					//cout << endl;
 					}
 // 				cout << endl;
-				cout << cpu_ops << endl;
+//				cout << cpu_ops << endl;
 				// gpu_matrix.printMatrix();
 			} while(cpu_ops > 0);
 #pragma omp barrier
@@ -428,13 +433,20 @@ namespace PJWFront
 			// Local storage for the synchronized (from multiple block maps) map
 			synchronized_map = new unsigned int[N];
 
+
+// cout << "Print RHS here on one line" << endl << "%" << endl;
+gpu_rhs.print_data();
+cout << "%" << endl;
+gpu_matrix.printMatrix(mtx_offset);
+cout << "%" << endl;
+
 			for(uint row=0; row<N; row++)
 				for(uint block=0; block<slices; block++)
 					if(cpu_map.value(block, row) != -1)
 					{
 						synchronized_map[row] = cpu_map.value(block, row);
 						block=slices;
-						cout << synchronized_map[row] << " ";
+						cout << mtx_offset + synchronized_map[row] << " ";
 					}
 
 			#pragma endregion

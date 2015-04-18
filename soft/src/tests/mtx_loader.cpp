@@ -21,9 +21,11 @@ int main(int argc, char* argv[])
 
 	string _platform = argv[5];
 	string _device = argv[6];
+	string _offset = argv[7];
 
 	int platform = boost::lexical_cast<int>(_platform);
 	int device = boost::lexical_cast<int>(_device);
+	int mtx_offset = boost::lexical_cast<uint>(_offset);
 
 	unsigned int _LWS = 192;
 	unsigned int _GWS = 0;
@@ -98,7 +100,7 @@ int main(int argc, char* argv[])
 
 	//cout << "Initializing solver" << endl;
 
-	PJWFront::GPUFrontal<double> gpuf(N, _LWS, _GWS, platform, device);
+	PJWFront::GPUFrontal<double> gpuf(N, _LWS, _GWS, platform, device, mtx_offset);
 
 	//cout << "Initialized solver" << endl;
 
@@ -167,6 +169,8 @@ int main(int argc, char* argv[])
 		cout << "The NaN error appeared" << endl;
 		return 0;
 	}
+
+cout << "----";
 
 	printf("\nTIME: %0.5f s\n", gpuf.ocltime);
 	printf("FLOPS: %0.3f\n", gpuf.fmads);
