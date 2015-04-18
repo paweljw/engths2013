@@ -22,20 +22,20 @@ namespace PJWFront
 			string implementation;
 
 			// Basic platform info
-			
+
 			/// OpenCL context
 			cl_context context;
-			
+
 			/// OpenCL platform
 			cl_platform_id platform;
-			
+
 			/// OpenCL queue
 			cl_command_queue queue;
-			
+
 			/// OpenCL device placeholder
 			cl_device_id device;
 			cl_device_id* devices;
-			cl_uint deviceCount;			
+			cl_uint deviceCount;
 
 			/// This OpenCL backend will only hold a single program
 			cl_program program;
@@ -45,9 +45,9 @@ namespace PJWFront
 				int j;
 				char* value;
 				size_t valueSize;
-				
+
 				cl_uint maxComputeUnits;
-	
+
 				clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, 0, NULL, &deviceCount);
 				devices = (cl_device_id*) malloc(sizeof(cl_device_id) * deviceCount);
 				clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, deviceCount, devices, NULL);
@@ -90,19 +90,19 @@ namespace PJWFront
 
                                         size_t p_size;
 					clGetDeviceInfo(devices[j],CL_DEVICE_MAX_WORK_GROUP_SIZE,sizeof(size_t),&p_size,NULL);
-				       printf("\tMax Work Group Size:\t%d\n",p_size);
-				   
+				       printf("\tMax Work Group Size:\t%d\n", (int)p_size);
+
 				   cl_uint jc;
-				       
+
 				   clGetDeviceInfo(devices[j],CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS,sizeof(cl_uint),&jc,NULL);
 				   printf("\tMax WI Dimensions:\t%d\n",jc);
-                                
+
 
 				}
 			}
-			
+
 			/// A helper function to get and select an OpenCL platform
-			cl_int oclGetPlatformID(cl_platform_id* clSelectedPlatformID)
+			cl_int oclGetPlatformID(cl_platform_id* clSelectedPlatformID, int pts = 1)
 			{
 				char chBuffer[1024];
 				cl_uint num_platforms;
@@ -146,7 +146,7 @@ namespace PJWFront
 							if(ciErrNum == CL_SUCCESS)
 							{
 								printf("platform %d: %s\n", i, chBuffer);
-								if(strstr(chBuffer, implementation.c_str()) != NULL)
+								if(i == pts)
 								{
 									printf("selected platform %d\n", i);
 									*clSelectedPlatformID = clPlatformIDs[i];
@@ -252,23 +252,21 @@ namespace PJWFront
 			}
 
 		public:
-		
+
 			OCLBackend()
 			{
-				OCLBackend("NVIDIA");
+				OCLBackend(0, 0);
 			}
-		
-		
+
+
 			/// The default constructor, which will setup the required OpenCL structs
 			/// A platform and device will be selected, a context and command queue will be created
-			OCLBackend(string _implementation)
+			OCLBackend(int pts, int dts)
 			{
-				implementation = _implementation;
-				
 				cl_int error;
 
 				// Platform setup
-				error = oclGetPlatformID(&platform);
+				error = oclGetPlatformID(&platform, pts);
 				if (error != CL_SUCCESS) {
 					cout << "Error getting platform id: " << oclErrorString(error) << endl;
 				   exit(error);
@@ -282,18 +280,18 @@ namespace PJWFront
 				}
 
 				enumerateDevices();
-				
-				// device = devices[device_id];
-				
+
+				device = devices[dts];
+
 				// Read what the device is
-				size_t valueSize;
-				char* value;
-				
-				clGetDeviceInfo(device, CL_DEVICE_NAME, 0, NULL, &valueSize);
-				value = (char*)malloc(valueSize);
-				clGetDeviceInfo(device, CL_DEVICE_NAME, valueSize, value, NULL);
-				
-				cout << "Using device " << value << endl;
+				//size_t valueSize;
+				//char* value;
+
+				//clGetDeviceInfo(device, CL_DEVICE_NAME, 0, NULL, &valueSize);
+				//value = (char*)malloc(valueSize);
+				//clGetDeviceInfo(device, CL_DEVICE_NAME, valueSize, value, NULL);
+
+				//cout << "Using device " << value << endl;
 
 				// Context setup
 				context = clCreateContext(0, 1, &device, NULL, NULL, &error);
@@ -329,7 +327,7 @@ namespace PJWFront
 					cout << "Error sending data in CCB: " << oclErrorString(error) << endl;
 					exit(error);
 				}
-				
+
 				// Push the data to the GPU in a blocking way
 				error = clEnqueueWriteBuffer(queue, buffer, CL_TRUE, 0, datasize, dataptr, 0, NULL, NULL);
 				if(error != CL_SUCCESS)
@@ -337,7 +335,7 @@ namespace PJWFront
 					cout << "Error sending data in EWB: " << oclErrorString(error) << endl;
 					exit(error);
 				}
-				
+
 				// Return the buffer
 				return buffer;
 			}
@@ -349,7 +347,7 @@ namespace PJWFront
 			/// @todo Explore non-blocking read scenarios
 			void receiveData(cl_mem data, void* dataptr, size_t datasize)
 			{
-				cl_int error = clEnqueueReadBuffer(queue, data, CL_TRUE, 0, datasize, dataptr, 0, NULL, NULL); 
+				cl_int error = clEnqueueReadBuffer(queue, data, CL_TRUE, 0, datasize, dataptr, 0, NULL, NULL);
 				if(error != CL_SUCCESS)
 				{
 					cout << "Error reading data [" << datasize << " bits]: " << oclErrorString(error) << endl;
@@ -376,7 +374,7 @@ namespace PJWFront
 
 				// Build the program
 				error = clBuildProgram(program, 1, &device, NULL, NULL, NULL);
-				
+
 				// If the build failed and the __SOLVERDEBUG flag is set, the build log will be printed
 				// Otherwise, just the error code will be printed
 				if (error != CL_SUCCESS) {
@@ -403,7 +401,7 @@ namespace PJWFront
 			cl_kernel getNamedKernel(std::string name)
 			{
 				cl_int error = 0;
-				
+
 				// Create the kernel object with some error handling just in case
 				cl_kernel ret = clCreateKernel(program, name.c_str(), &error);
 				if (error != CL_SUCCESS) {
@@ -413,7 +411,7 @@ namespace PJWFront
 
 				size_t kernel_work_group_size;
 				clGetKernelWorkGroupInfo(ret, device, CL_KERNEL_WORK_GROUP_SIZE, sizeof(size_t), &kernel_work_group_size, NULL);
-				
+
 				return ret;
 			}
 
@@ -431,7 +429,7 @@ namespace PJWFront
 					exit(error);
 				}
 			}
-			
+
 			template <typename T>
 			void arg_local(cl_kernel kernel, unsigned int arg, uint size_of_memory)
 			{
@@ -515,9 +513,9 @@ namespace PJWFront
 					cout << "Error finishing queue: " << oclErrorString(error) << endl;
 					exit(error);
 				}
-				
+
 			}
-			
+
 			void finish(std::string what)
 			{
 				cl_int error = clFinish(queue);
@@ -526,9 +524,9 @@ namespace PJWFront
 					cout << "Error finishing queue [" << what.c_str() << "]: " << oclErrorString(error) << endl;
 					exit(error);
 				}
-				
+
 			}
-			
+
 			/// Blocks until the command attached to the event has finished, then returns its elapsed time.
 			/// @param event The cl_event to wait for.
 			/// @returns Total elapsed time for the event in seconds.

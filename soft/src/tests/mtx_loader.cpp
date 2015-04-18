@@ -1,3 +1,4 @@
+#include <boost/lexical_cast.hpp>
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -18,36 +19,42 @@ int main(int argc, char* argv[])
 	string mtx_main = argv[1];
 	string mtx_rhs = argv[2];
 
+	string _platform = argv[3];
+	string _device = argv[4];
+
+	int platform = boost::lexical_cast<int>(_platform);
+	int device = boost::lexical_cast<int>(_device);
+
 	unsigned int _LWS = 192;
 	unsigned int _GWS = 0;
-	
+
 	string impl;
 
-bool fakeRHS = false;	
+bool fakeRHS = false;
 
 	if(argc > 3)
 	{
 		string sLWS = argv[3];
 		string sGWS = argv[4];
-		
+
 		istringstream isLWS(sLWS);
 		istringstream isGWS(sGWS);
-		
+
 		isLWS >> _LWS;
 		isGWS >> _GWS;
 	}
-	
+
 	if(argc > 5)
 	{
 		impl = argv[5];
 	}
 
-	cout << "Opening files..." << endl;	
+	cout << "Opening files..." << endl;
 
 	fstream main;
 	main.open(mtx_main.c_str(), std::fstream::in);
 
-	if(!main.is_open()) 
+	if(!main.is_open())
 	{
 		cout << "Can't open " << mtx_main << endl;
 		exit(1);
@@ -87,7 +94,7 @@ bool fakeRHS = false;
 		}
 	}
 
-	PJWFront::GPUFrontal<double> gpuf(N, _LWS, _GWS, impl);
+	PJWFront::GPUFrontal<double> gpuf(N, _LWS, _GWS, platform, device);
 
 	cout << "MTX: " << mtx_main << endl;
 	cout << "RHS: " << mtx_rhs << endl;
@@ -125,7 +132,6 @@ bool fakeRHS = false;
 				iss >> val;
 
 				gpuf.setRHS(counter, val);
-				// cout << counter << endl;
 				counter++;
 				}
 			}
@@ -134,7 +140,7 @@ bool fakeRHS = false;
 		for(int i=0; i<N;i++) gpuf.setRHS(i, 1);
 	}
 
-	cout << "Passing control to solver" << endl;
+//	cout << "Passing control to solver" << endl;
 
 	try
 	{
@@ -150,8 +156,8 @@ bool fakeRHS = false;
 		return 0;
 	}
 
-	printf("\nTime in kernels: %0.5f s\n", gpuf.ocltime);
-	printf("FLOPS: %0.3f\n", gpuf.fmads);
+	printf("\nTIME: %0.5f s\n", gpuf.ocltime);
+	// printf("FLOPS: %0.3f\n", gpuf.fmads);
 
 
 	return 0;

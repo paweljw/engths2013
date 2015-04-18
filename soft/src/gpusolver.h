@@ -49,9 +49,9 @@ namespace PJWFront
         return def;
 		}
     };
-	
+
 	/// @brief Main class for the GPU version of the frontal solver
-	/// @tparam ScalarType The scalar type that will be used throughout the CPU and GPU code to store scalar values. 
+	/// @tparam ScalarType The scalar type that will be used throughout the CPU and GPU code to store scalar values.
 	/// Currently only float is supported as double support is widely available on NVidia chips only
 	/// @author Pawel J. Wal
 	template <typename ScalarType>
@@ -60,7 +60,7 @@ namespace PJWFront
 	private:
 		/// Number of processing blocks (CUDA: workgroups, OCL: workitems).
 		uint BLOCK_NUM;
-		
+
 		/// CPU-to-GPU data matrix structure
 		util::slicing_matrix<ScalarType>	gpu_matrix;
 		/// CPU-to-GPU RHS storage structure
@@ -75,12 +75,14 @@ namespace PJWFront
 
 		uint slice_size;
 
+		unsigned int *synchronized_map;
+
 		/// Numerical error storage
 		ScalarType NUM_ERR;
 
 		/// A backend helper pointer storage
 		ocl::OCLBackend* backend;
-		
+
 		/// A simple helper function for backsubstitution phase
 		/// @param sm A synchronized map pulled from the GPU after completing solution cycle
 		/// @param fn The function for which we need to find the row
@@ -89,12 +91,12 @@ namespace PJWFront
 		{
 			for(uint i=0; i<N; i++)
 				if(sm[i] == fn) return i;
-				
+
 			return -1; // This means trouble and usually causes an exception to be thrown
 		}
 
 		inline void ReduceRows(const unsigned int original, const unsigned int offender, const unsigned int function)
-		{	
+		{
 			ScalarType upper = gpu_matrix.get(original, function);
 			ScalarType lower = gpu_matrix.get(offender, function);
 
@@ -103,11 +105,11 @@ namespace PJWFront
 
 			for(unsigned int i = function; i < N; i++)
 			{
-				if(i==function) 
+				if(i==function)
 					gpu_matrix.set(original, i, 0.0f);
-				else 
+				else
 				{
-					if(gpu_matrix.get(offender, i) == 0) 
+					if(gpu_matrix.get(offender, i) == 0)
 						continue;
 
 					ScalarType byval = gpu_matrix.get(offender, i) * multiplier;
@@ -115,7 +117,7 @@ namespace PJWFront
 					gpu_matrix.add(original, i, byval);
 				}
 		}
-			
+
 		gpu_rhs.add(original, gpu_rhs.get(offender) * multiplier);
 	}
 
@@ -133,39 +135,39 @@ namespace PJWFront
 
 		/// Solution vector storage
 		std::vector<ScalarType> solution;
-		
+
 		/// compat
 		GPUFrontal()
 		{
 		}
-		
-		GPUFrontal(int size, uint _LWS = 192, uint _GWS = 0, std::string implementation = "NVIDIA")
+
+		GPUFrontal(int size, uint _LWS = 192, uint _GWS = 0, int pts = 0, int dts = 0)
 		{
 			// Initialize OpenCL backend
-			backend = new ocl::OCLBackend(implementation);
+			backend = new ocl::OCLBackend(pts, dts);
 
 			// Remember matrix size
 			N = size;
 
 			// Remember numerical error
 			NUM_ERR = 0.0000000001;
-				
+
 			// Nic tu nie cwaniakujemy
 			LWS = _LWS;
 
-			// Tu te¿ nie
+			// Tu teï¿½ nie
 			GWS = _GWS;
-			
+
 			fmad = (unsigned long)0;
 
-			// Na slice przypada tyle bloków
+			// Na slice przypada tyle blokï¿½w
 			BLOCK_NUM = GWS/LWS;
 
 			cout << "BN: " << BLOCK_NUM << ", GWS: " << GWS << ", LWS: " << LWS << endl;
 
 			slice_size = GWS;
 
-			// Inicjalizacja kawa³kuj¹cej macierzy; slice ma mieæ taki rozmiar jak GWS
+			// Inicjalizacja kawaï¿½kujï¿½cej macierzy; slice ma mieï¿½ taki rozmiar jak GWS
 			gpu_matrix = util::slicing_matrix<ScalarType>(N, slice_size, backend);
 
 			slices = gpu_matrix.slices();
@@ -177,19 +179,19 @@ namespace PJWFront
 
 	//		cout << "Done 2" << endl;
 
-			// To akurat ma sens, tylko trzeba bêdzie tego u¿ywaæ mocno dooko³a
+			// To akurat ma sens, tylko trzeba bï¿½dzie tego uï¿½ywaï¿½ mocno dookoï¿½a
 			cpu_map = comp_nonzero_def(slices, N);
 			cpu_map.setDefault(-1);
 
 //cout << "Done" << endl;
 
-			// To na póŸniej
+			// To na pï¿½ï¿½niej
 			solution = std::vector<ScalarType> (N);
-			
+
 			//cout << "Done" << endl;
 
-			// Niech to zostanie, bo nie pamiêtam co tu siê dzieje
-			CompileKernels();			
+			// Niech to zostanie, bo nie pamiï¿½tam co tu siï¿½ dzieje
+			CompileKernels();
 		}
 
 		/// Setter for matrix values
@@ -209,7 +211,7 @@ namespace PJWFront
 			gpu_rhs.put(row, val);
 		}
 
-		/// Main solution function. Call ONLY after setting all matrix and RHS values as this is an in-place solution. 
+		/// Main solution function. Call ONLY after setting all matrix and RHS values as this is an in-place solution.
 		/// It will change or destroy data in gpu_matrix structure and desync it with cpu_matrix structure.
 		/// @throws UnsolvableException
 		/// @todo change the way that cpu_ops is synchronized between revolutions; current wastes a couble of bits every revolution
@@ -219,14 +221,14 @@ namespace PJWFront
 
 			#pragma region OCL memory setup
 
-			// Kernele zostaj¹
+			// Kernele zostajï¿½
 			cl_kernel Slicer = backend->getNamedKernel("Slicer");
 			cl_kernel Resolver = backend->getNamedKernel("Resolver");
 
-			// M te¿ siê przyda
+			// M teï¿½ siï¿½ przyda
 			cl_mem gpu_M_handle = backend->sendData(&slice_size, sizeof(uint));
-			
-			backend->arg(Slicer, 1,  gpu_M_handle);	
+
+			backend->arg(Slicer, 1,  gpu_M_handle);
 
 			cl_mem gpu_blocknum_handle = backend->sendData(&BLOCK_NUM, sizeof(uint));
 			backend->arg(Resolver, 4, gpu_blocknum_handle);
@@ -235,13 +237,13 @@ namespace PJWFront
 			cl_mem gpu_ss_handle = backend->sendData(&ss, sizeof(uint));
 			backend->arg(Resolver, 6, gpu_ss_handle);
 
-			unsigned int cpu_ops = 0; // tym siê przejmujemy ju¿ tylko na cpu
+			unsigned int cpu_ops = 0; // tym siï¿½ przejmujemy juï¿½ tylko na cpu
 
 			ocltime = 0.0f;
 			#pragma endregion
 
 			#pragma region Solution loop
-			
+
 			do
 			{
 				cpu_ops = 0;
@@ -253,7 +255,7 @@ namespace PJWFront
 				for(int slice = 0; slice < slices; slice++)
 				{
 					cout << ">";
-			
+
 					if(last_slice != slice)
 					{
 						last_slice = slice;
@@ -273,7 +275,7 @@ namespace PJWFront
 						uint ln = gpu_matrix.slice_width(slice);
 						gpu_N_handle = backend->sendData(&ln, sizeof(uint));
 
-						backend->arg(Slicer, 0,  gpu_N_handle);		
+						backend->arg(Slicer, 0,  gpu_N_handle);
 						backend->arg(Slicer, 2, slice_matrix);
 						backend->arg(Slicer, 3, slice_rhs);
 						backend->arg(Slicer, 4, map_slicer_handle);
@@ -282,7 +284,7 @@ namespace PJWFront
 
 					uint *flops = new uint;
 					*flops = 0;
-					
+
 					cl_mem gpu_flops = backend->sendData(flops, sizeof(uint));
 
 					backend->arg(Slicer, 6, gpu_flops);
@@ -298,7 +300,7 @@ namespace PJWFront
 
 					if(new_slice)
 					{
-						backend->arg(Resolver, 0,  gpu_N_handle);		
+						backend->arg(Resolver, 0,  gpu_N_handle);
 						backend->arg(Resolver, 1, slice_matrix);
 						backend->arg(Resolver, 2, slice_rhs);
 						backend->arg(Resolver, 3, map_slicer_handle);
@@ -318,10 +320,10 @@ namespace PJWFront
 
 					fmad += (unsigned long)flops;
 
-					if(*local_ops > 0) 
+					if(*local_ops > 0)
 					{
 						slice--;
-						new_slice = false;			
+						new_slice = false;
 					} else {
 						gpu_matrix.pull_slice(slice, slice_matrix);
 						gpu_rhs.pull_slice(slice, slice_rhs);
@@ -349,7 +351,7 @@ namespace PJWFront
 							{
 								uint local_ix = block * gpu_matrix.slice_width(slice) + row;
 
-								if(map_slicer.get(local_ix) != -1) 
+								if(map_slicer.get(local_ix) != -1)
 								{
 									// dla mapy globalnej powinien byc to juz wlasciwy row
 									cpu_map(slice, global_ix) = map_slicer.get(local_ix) + height_compensation;
@@ -357,10 +359,10 @@ namespace PJWFront
 								}
 							}
 						}
-						
+
 					}
 					cout << "." << endl;
-				} 
+				}
 
 				cout << "*" << endl;
 				#pragma omp barrier
@@ -374,7 +376,7 @@ namespace PJWFront
 						{
 						//	cout << cpu_map.value(block, row) << " " << endl;
 							if(cpu_map.value(block, row) != -1)
-							{ 
+							{
 							//	cout << "Enter loop" << endl;
 								// te koordynaty juz sa globalne
 								if(first == -1){
@@ -398,29 +400,38 @@ namespace PJWFront
 				cout << cpu_ops << endl;
 				// gpu_matrix.printMatrix();
 			} while(cpu_ops > 0);
-#pragma omp barrier			
+#pragma omp barrier
 //			gpu_matrix.printMatrix();
 
 			#pragma endregion
-			
+
 		//	printf("Time in kernels: %0.9f s\n", ocltime);
-			
+
 			fmads = fmad / ocltime;
 
 		//	printf("Achieved FMAD/s: %0.1f\n", fmads);
 
 			cout << "Assembling solution" << endl;
 			// Local storage for the synchronized (from multiple block maps) map
-			unsigned int *synchronized_map = new unsigned int[N];
+			synchronized_map = new unsigned int[N];
 
 			for(uint row=0; row<N; row++)
 				for(uint block=0; block<slices; block++)
-					if(cpu_map.value(block, row) != -1) 
-						synchronized_map[row] = cpu_map.value(block, row),
+					if(cpu_map.value(block, row) != -1)
+					{
+						synchronized_map[row] = cpu_map.value(block, row);
 						block=slices;
+						cout << synchronized_map[row] << " ";
+					}
 
 			#pragma endregion
-			
+
+// what we would like here, is for the map and matrix to be available to the loader
+
+
+// removing backsubstitution for master thesis; not necessary here
+
+/*
 			#pragma region back substitution
 			for(uint function = N-1; function >= 0; --function)
 			{
@@ -428,7 +439,7 @@ namespace PJWFront
 				else if(!(function % 100)) cout << ".";
 				// Tends to drop off the far end of the array in MSVC, so break just in case
 				// Even better - it appears that MSVC is OK with the idea of a unsigned integer having a <0 value
-				if(function > N-1 || function < 0) 
+				if(function > N-1 || function < 0)
 					break;
 
 				// Check for the row in which our currently backsubstituted function is
@@ -436,28 +447,28 @@ namespace PJWFront
 
 				// If function is in "no row", throw UnsolvableException
 				// Basically if this happens, the input matrix was never sane in the first place
-				if(fnIdx < 0) 
+				if(fnIdx < 0)
 					throw unsex;
-				
+
 				// Seed the solution with RHS data
 				solution[function] = gpu_rhs.get(fnIdx);
-				
+
 				uint begat = gpu_matrix.slice_rightmost(gpu_matrix.which_slice(fnIdx));
-				
+
 				// Since we're at x_i, terms x_i+1,...,x_n need to be applied
 				#pragma omp parallel for
 				for(int column = begat; column > function; column--)
 				{
 					ScalarType multiplier = gpu_matrix.get(fnIdx, column); 	// In ax_i,j - this is the a term
 					ScalarType times = solution[column];								// x_c = ...
-					
+
 					// Subtract the term which we're considering
 					// In Gauss elimination this would need to be subtracted from both sides of the particular equation
 					// Since our matrix is not used for anything afterwards, the matrix zeroing is skipped
 					#pragma omp atomic
 					solution[function] -= multiplier*times;
 				}
-				
+
 				// Finally, we're left with an expression of ax_i = ...
 				// Dividing by a gives us the actual value of x_i, which is what we want in our solution
 				ScalarType ownMultiplier = gpu_matrix.get(fnIdx, function);
@@ -465,12 +476,12 @@ namespace PJWFront
 				solution[function] /= ownMultiplier;
 			}
 			#pragma endregion
-			
+		*/
 			#pragma region Free up the OCL resources
-			
+
 			backend->releaseData(gpu_M_handle);
 			backend->releaseData(gpu_ss_handle);
-			
+
 			backend->releaseKernel(Slicer);
 			#pragma endregion
 
