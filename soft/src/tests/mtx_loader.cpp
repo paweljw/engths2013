@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
 		impl = argv[5];
 	}
 
-	cout << "Opening files..." << endl;
+	//cout << "Opening files..." << endl;
 
 	fstream main;
 	main.open(mtx_main.c_str(), std::fstream::in);
@@ -77,7 +77,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	cout << "Opened dem files" << endl;
+	//cout << "Opened dem files" << endl;
 
 	string line;
 
@@ -98,12 +98,12 @@ int main(int argc, char* argv[])
 		}
 	}
 
-cout << "Initializing solver " << N << endl;
+//cout << "Initializing solver " << N << endl;
 
 	PJWFront::GPUFrontal<double> gpuf(N, _LWS, _GWS, platform, device, mtx_offset);
 
-cout << "Initialized solver" << endl;
-
+//cout << "Initialized solver" << endl;
+/*
 
 	cout << "MTX: " << mtx_main << endl;
 	cout << "RHS: " << mtx_rhs << endl;
@@ -112,7 +112,7 @@ cout << "Initialized solver" << endl;
 	cout << "N:   " << N << endl << "M:   " << M << endl << "DP:   " << DP << endl;
 
 	cout << "Upycham macierz" << endl;
-
+*/
 	while(getline(main, line))
 	{
 		if(line[0] != '%')
@@ -123,13 +123,13 @@ cout << "Initialized solver" << endl;
 			float val;
 			iss >> x >> y >> val;
 
-			gpuf.set(x-1, y-1, val);
+			gpuf.set(x, y, val);
 		}
 	}
 
 	checked_size = false;
 
-	cout << "Upycham RHS" << endl;
+//	cout << "Upycham RHS" << endl;
 
 	if(!fakeRHS)
 	{
@@ -153,11 +153,11 @@ cout << "Initialized solver" << endl;
 		for(int i=0; i<N;i++) gpuf.setRHS(i, 1);
 	}
 
-	cout << "Passing control to solver" << endl;
+//	cout << "Passing control to solver" << endl;
 
 	try
 	{
-		cout << "In try" << endl;
+//		cout << "In try" << endl;
 		gpuf.solve();
 	} catch(PJWFront::BadException) {
 		cout << "General bad exception happened" << endl;

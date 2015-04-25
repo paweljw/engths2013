@@ -43,19 +43,20 @@ namespace PJWFront
 
 			slicing_matrix(uint _size, uint _slice_height, ocl::OCLBackend* b)
 			{
-				cout << "passed in size" << _size << endl;
+				// cout << "passed in size" << _size << endl;
+				// cout << "slice_height " << _slice_height << endl;
 				size = _size;
 				slice_height = _slice_height;
 
 				// Ustalenie iloœci slice'ów
-				_slices = 0;
-				while(_slices * slice_height < size) _slices++;
+				_slices = 1;
+				// while(_slices * slice_height < size) _slices++;
 
-				m = compressed_matrix<ScalarType>(size, size);
+				m = compressed_matrix<ScalarType>(size, slice_height); //slice_height, size);
 
 				backend = b;
 				
-				cout << _slices  << " slices" << endl;
+				//cout << _slices  << " slices" << endl;
 
 				slice_left = new uint[_slices];
 				slice_right = new uint[_slices];
@@ -79,6 +80,7 @@ namespace PJWFront
 
 			void set(uint x, uint y, ScalarType val)
 			{
+				// cout << x << " " << y << " *" << endl;
 				if(m(x, y) != val)
 					m(x, y) = val;
 
@@ -100,15 +102,16 @@ namespace PJWFront
 
 			uint slice_width(uint slice)
 			{
-				cout << "getting slice dimensions for slice " << slice << endl;
- 				cout << "slice_right " << slice_right[slice] << endl;
-				cout << "slice_left " << slice_left[slice] << endl;
+				//cout << "getting slice dimensions for slice " << slice << endl;
+ 				//cout << "slice_right " << slice_right[slice] << endl;
+				//cout << "slice_left " << slice_left[slice] << endl;
 				int ret = (slice_right[slice] - slice_left[slice]) + 1;
 				return ret <= 0 ? 0 : ret;
 			}
 
 			void add(uint x, uint y, ScalarType val)
 			{
+				// cout << x << " " << y << endl;
 				val += m(x, y);
 				set(x, y, val);
 			}
@@ -122,11 +125,11 @@ namespace PJWFront
 			{
 				if(_cache) return cache;
 
-				cout << "before alloc" << endl;
-				cout << "width " << slice_width(slice_number) << endl;
-				cout << "height " << slice_height << endl;
+				//cout << "before alloc" << endl;
+				//cout << "width " << slice_width(slice_number) << endl;
+				//cout << "height " << slice_height << endl;
 				ScalarType *flat_slice = new ScalarType[ slice_width(slice_number) * slice_height];
-				cout << "after alloc" << endl;
+				//cout << "after alloc" << endl;
 	
 				uint global_ix = 0;
 
