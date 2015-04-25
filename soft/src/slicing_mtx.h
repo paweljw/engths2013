@@ -43,6 +43,7 @@ namespace PJWFront
 
 			slicing_matrix(uint _size, uint _slice_height, ocl::OCLBackend* b)
 			{
+				cout << "passed in size" << _size << endl;
 				size = _size;
 				slice_height = _slice_height;
 
@@ -54,7 +55,7 @@ namespace PJWFront
 
 				backend = b;
 				
-				// cout << _slices  << " slices" << endl;
+				cout << _slices  << " slices" << endl;
 
 				slice_left = new uint[_slices];
 				slice_right = new uint[_slices];
@@ -99,7 +100,11 @@ namespace PJWFront
 
 			uint slice_width(uint slice)
 			{
-				return (slice_right[slice] - slice_left[slice]) + 1;
+				cout << "getting slice dimensions for slice " << slice << endl;
+ 				cout << "slice_right " << slice_right[slice] << endl;
+				cout << "slice_left " << slice_left[slice] << endl;
+				int ret = (slice_right[slice] - slice_left[slice]) + 1;
+				return ret <= 0 ? 0 : ret;
 			}
 
 			void add(uint x, uint y, ScalarType val)
@@ -117,8 +122,12 @@ namespace PJWFront
 			{
 				if(_cache) return cache;
 
+				cout << "before alloc" << endl;
+				cout << "width " << slice_width(slice_number) << endl;
+				cout << "height " << slice_height << endl;
 				ScalarType *flat_slice = new ScalarType[ slice_width(slice_number) * slice_height];
-
+				cout << "after alloc" << endl;
+	
 				uint global_ix = 0;
 
 				// rows

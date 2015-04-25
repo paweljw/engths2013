@@ -151,17 +151,17 @@ namespace PJWFront
 			// Initialize OpenCL backend
 			backend = new ocl::OCLBackend(pts, dts);
 
-			//cout << "Set up backend" << endl;
+			cout << "Set up backend" << endl;
 
 			// Remember matrix size
 			N = size;
 
-			//cout << "Set size, lol" << endl;
+			cout << "Set size, lol" << endl;
 
 			// Remember numerical error
 			NUM_ERR = 0.0000000001;
 
-			//cout << "Set numerical error, lol" << endl;
+			cout << "Set numerical error, lol" << endl;
 
 			// Nic tu nie cwaniakujemy
 			LWS = _LWS;
@@ -169,47 +169,49 @@ namespace PJWFront
 			// Tu te� nie
 			GWS = _GWS;
 
-			//cout << "Set LWS and GWS, lol" << endl;
+			cout << "Set LWS and GWS, lol" << endl;
 
 			fmad = (unsigned long)0;
 
-			//cout << "Set fmad, lol" << endl;
+			cout << "Set fmad, lol" << endl;
 			
 			BLOCK_NUM = GWS/LWS;
 
-			//cout << "Set block_num, lol" << endl;
+			cout << "Set block_num, lol" << endl;
 
-			// cout << "BN: " << BLOCK_NUM << ", GWS: " << GWS << ", LWS: " << LWS << endl;
+			 cout << "BN: " << BLOCK_NUM << ", GWS: " << GWS << ", LWS: " << LWS << endl;
 
 			slice_size = GWS;
 
 			// Inicjalizacja kawa�kuj�cej macierzy; slice ma mie� taki rozmiar jak GWS
 			gpu_matrix = util::slicing_matrix<ScalarType>(N, slice_size, backend);
 
-			//cout << "slicing matrix done" << endl;
+			cout << "slicing matrix done" << endl;
 
 			slices = gpu_matrix.slices();
 
-			//cout << "Done" << endl;
+			cout << "Done" << endl;
 
 			// A niech tam, whatever
 			gpu_rhs = util::slicing_vector<ScalarType>(N, slice_size, backend);
 
-			//cout << "Done 2" << endl;
+			cout << "Done 2" << endl;
 
 			// To akurat ma sens, tylko trzeba b�dzie tego u�ywa� mocno dooko�a
 			cpu_map = comp_nonzero_def(slices, N);
 			cpu_map.setDefault(-1);
 
-			//cout << "Done 3" << endl;
+			cout << "Done 3" << endl;
 
 			// To na piej
 			solution = std::vector<ScalarType> (N);
 
-			//cout << "Done" << endl;
+			cout << "Done" << endl;
 
 			// Niech to zostanie, bo nie pami�tam co tu si� dzieje
 			CompileKernels();
+
+			cout << "Aww :<" << endl;
 		}
 
 		/// Setter for matrix values
@@ -239,6 +241,8 @@ namespace PJWFront
 
 			#pragma region OCL memory setup
 
+			cout << "start" << endl;
+
 			// Kernele zostaj�
 			cl_kernel Slicer = backend->getNamedKernel("Slicer");
 			cl_kernel Resolver = backend->getNamedKernel("Resolver");
@@ -262,6 +266,8 @@ namespace PJWFront
 
 			#pragma region Solution loop
 
+			cout << "mem setup" << endl;
+
 			do
 			{
 				cpu_ops = 0;
@@ -272,7 +278,7 @@ namespace PJWFront
 
 				for(int slice = 0; slice < slices; slice++)
 				{
-					// cout << ">";
+					cout << ">";
 
 					if(last_slice != slice)
 					{
@@ -280,8 +286,11 @@ namespace PJWFront
 						new_slice = true;
 					}
 
+					cout << "slice" << endl;
 					cl_mem slice_matrix = gpu_matrix.get_slice(slice, !new_slice);
+					cout << "slice2" << endl;
 					cl_mem slice_rhs = gpu_rhs.get_slice(slice, !new_slice);
+					cout << "slices" << endl;
 					util::ocl_vector<int> map_slicer = util::ocl_vector<int>((gpu_matrix.slice_width(slice)) * BLOCK_NUM, backend);
 					map_slicer.fill(-1.0f);
 					cl_mem map_slicer_handle = map_slicer.ocl_handle(!new_slice);
